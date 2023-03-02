@@ -1,0 +1,12 @@
+strings:
+  inputs: Blanball/Resources/Base.lproj
+  outputs:
+    - templateName: structured-swift5
+      output: Generated/Strings.swift
+xcassets:
+  inputs:
+    - Resources/Images.xcassets
+    - Resources/Colors.xcassets
+  outputs:
+    - templateName: swift6
+      output: Generated/Assets.swift
