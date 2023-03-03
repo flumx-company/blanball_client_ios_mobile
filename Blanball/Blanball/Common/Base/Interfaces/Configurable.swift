@@ -8,10 +8,7 @@
 import Foundation
 
 protocol Configurable {
-
     associatedtype Model
-
     /// Configures object with given model.
     func configure(with model: Model)
-
 }
