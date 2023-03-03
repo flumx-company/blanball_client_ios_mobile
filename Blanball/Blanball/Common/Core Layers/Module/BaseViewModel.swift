@@ -5,6 +5,7 @@
 //  Created by Misha Deneka on 01.03.2023.
 //
 
+import Foundation
 import Combine
 
 class BaseViewModel<State>: ObservableObject {
