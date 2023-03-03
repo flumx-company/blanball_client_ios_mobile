@@ -48,13 +48,11 @@ public protocol CommonService {
      Used for sending additional parameters during network event tracking in analytics
      */
     var analyticsAdditionalParameters: String? { get }
+    
 }
 
-public extension CommonService {
-    
-    // MARK: URLRequestConvertible
+extension CommonService {
     func asURLRequest() throws -> URLRequest {
-        let config = NetworkConfiguration.default
         guard let url = URL(string: host)?.appendingPathComponent(path) else {
             throw NetworkError.badUrl
         }
@@ -68,7 +66,7 @@ public extension CommonService {
             }
         }
         
-        if let url = mutableURLRequest.url, config.logging {
+        if let url = mutableURLRequest.url {
             print("REQUEST: \(method.rawValue) \(url)")
             print("Request headers: \(mutableURLRequest.allHTTPHeaderFields ?? [:])")
             if let parameters = parameters {
@@ -77,9 +75,37 @@ public extension CommonService {
         }
         
         if let parameters = parameters {
-            return try encodingForRequest().encode(mutableURLRequest, with: parameters)
+            encodeParamsForRequest(
+                request: &mutableURLRequest,
+                with: parameters
+            )
+            return mutableURLRequest
         } else {
             return mutableURLRequest
+        }
+    }
+    
+    func encodeParamsForRequest(
+        request: inout URLRequest,
+        with params: [String: Any]
+    ) {
+        switch method {
+        case .post, .put, .delete, .patch:
+            let jsonData = try? JSONSerialization.data(withJSONObject: params)
+            request.httpBody = jsonData
+        case .get:
+            let queryItems = params.map { key, value in
+                URLQueryItem(name: key, value: "\(value)")
+            }
+            var components = URLComponents(
+                url: request.url!,
+                resolvingAgainstBaseURL: false
+            )
+            components?.queryItems = queryItems
+            request.url = components?.url
+        default:
+            let jsonData = try? JSONSerialization.data(withJSONObject: params)
+            request.httpBody = jsonData
         }
     }
 }

@@ -7,10 +7,12 @@
 
 import Foundation
 
-enum NeworkError: Error {
+enum NetworkError: LocalizedError {
     case noData
     case anotherError(String, Error)
     case badUrl
     case processableError(Error)
+    case invalidResponse
+    case wrongStatusCode(_ statusCode: Int)
     case noInternet
 }
