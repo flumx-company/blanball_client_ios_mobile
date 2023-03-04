@@ -78,6 +78,11 @@ DerivedData/
 
 build/
 
+#SwiftGen
+
+SwiftGen/
+SwiftGen.zip
+Blanball/Resources/Generated/
 
 #####
 # Xcode private settings (window sizes, bookmarks, breakpoints, custom executables, smart groups)
