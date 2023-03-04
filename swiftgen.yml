@@ -3,9 +3,13 @@ strings:
   outputs:
     - templateName: structured-swift5
       output:  Blanball/Resources/Generated/Strings+Generated.swift
+      params:
+          enumName: Strings
 xcassets:
   inputs:
     - Blanball/Resources/Assets.xcassets
   outputs:
     - templateName: swift5
       output: Blanball/Resources/Generated/Assets+Generated.swift
+      params:
+          enumName: Assets
