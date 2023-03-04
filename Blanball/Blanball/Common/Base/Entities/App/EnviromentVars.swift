@@ -40,6 +40,6 @@ struct EnvironmentVars {
     }()
     
     static let apiHost: String = {
-        return "https://\(baseApiHost)/api/"
+        return "http://\(baseApiHost)/api/"
     }()
 }
