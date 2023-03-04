@@ -15,9 +15,7 @@ open class ApiClient<T: CommonService> {
     }
     
 
-    func request<U: Decodable>(_ service: T) -> Signal<U, NetworkError> {
-        Task {
-            await networkManager.request(service)
-        }
+    func request<U: Decodable>(_ service: T) async throws -> U {
+        return try await networkManager.request(service)
     }
 }

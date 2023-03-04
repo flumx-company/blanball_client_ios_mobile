@@ -1,0 +1,17 @@
+//
+//  ProdBlanball.xcconfig
+//  Blanball
+//
+//  Created by Misha Deneka on 03.03.2023.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+// API
+API_BASE_URL = 178.151.201.167:49205
+
+// APP SETTINGS
+APP_NAME = Blanball Prod
+APP_BUNDLE_ID = com.FlumX.Blanball
+SCHEME = DiiaSandbox
