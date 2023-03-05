@@ -10,10 +10,18 @@ import Combine
 
 class BaseViewModel<State: ViewModelState>: ObservableObject {
 
-    @Published var state: State
+    @Published private(set) var state: State
 
-    private var cancellables = Set<AnyCancellable>()
+    var cancellables = Set<AnyCancellable>()
 
+    func start() {
+       
+    }
+    
+    func updateState(newValue: State) {
+        state = newValue
+    }
+    
     init(state: State) {
         self.state = state
     }
@@ -21,12 +29,8 @@ class BaseViewModel<State: ViewModelState>: ObservableObject {
     deinit {
         cancel()
     }
-    
-    func bind() {
-       
-    }
 
-    func cancel() {
+    private func cancel() {
         cancellables.forEach { $0.cancel() }
         cancellables.removeAll()
     }

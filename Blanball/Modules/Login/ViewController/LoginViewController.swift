@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import Combine
 
-class LoginViewController: UIViewController {
+class LoginViewController: BaseViewController<LoginViewModel> {
+    
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
@@ -18,5 +20,27 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.start()
+    }
+    
+    override func setupView() {
+        
+    }
+    
+    override func bindViewModel() {
+        viewModel
+            .$state
+            .sink { state in
+                switch state {
+                case .started:
+                    break
+                case .failure(error: _):
+                    break
+                case .loading:
+                    break
+                case .updated:
+                    break
+                }
+            }.store(in: &viewModel.cancellables)
     }
 }

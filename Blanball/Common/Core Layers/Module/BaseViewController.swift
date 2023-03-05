@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BaseViewController<ViewModel>: UIViewController {
+class BaseViewController<ViewModel: AnyObject>: UIViewController {
 
     // MARK: - Public properties
     
@@ -31,6 +31,7 @@ class BaseViewController<ViewModel>: UIViewController {
         super.viewDidLoad()
         setupView()
         bindViewModel()
+        Assets.Colors.Text.Sublet.
     }
 
     func setupView() {
