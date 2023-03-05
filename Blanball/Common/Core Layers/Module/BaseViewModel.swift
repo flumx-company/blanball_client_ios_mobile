@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class BaseViewModel<State>: ObservableObject {
+class BaseViewModel<State: ViewModelState>: ObservableObject {
 
     @Published var state: State
 

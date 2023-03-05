@@ -16,7 +16,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var checkBoxButton: UIButton!
     @IBOutlet weak var agreementLabel: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
