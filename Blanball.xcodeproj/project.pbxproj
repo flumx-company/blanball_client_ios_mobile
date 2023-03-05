@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41CAA4E829B4F86C00492DEB /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41CAA4E629B4F86C00492DEB /* LoginViewController.xib */; };
+		41CAA4E929B4F86C00492DEB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CAA4E729B4F86C00492DEB /* LoginViewController.swift */; };
+		41CAA4ED29B4FC0500492DEB /* Assets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CAA4EB29B4FC0400492DEB /* Assets+Generated.swift */; };
+		41CAA4EE29B4FC0500492DEB /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CAA4EC29B4FC0400492DEB /* Strings+Generated.swift */; };
 		C6254A1329B376E000558130 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = C6254A1229B376DF00558130 /* swiftgen.yml */; };
-		C6303E0029B39CB9002F96E4 /* Assets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6303DFE29B39CB9002F96E4 /* Assets+Generated.swift */; };
-		C6303E0129B39CB9002F96E4 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6303DFF29B39CB9002F96E4 /* Strings+Generated.swift */; };
 		C6B8E82129ACECDC009AAD8F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C6B8E82329ACECDC009AAD8F /* Localizable.strings */; };
 		C6C7119429ACDCBB00D58FE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C7119329ACDCBB00D58FE8 /* AppDelegate.swift */; };
 		C6C7119829ACDCBB00D58FE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C7119729ACDCBB00D58FE8 /* ViewController.swift */; };
@@ -34,9 +36,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41CAA4E629B4F86C00492DEB /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		41CAA4E729B4F86C00492DEB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		41CAA4EB29B4FC0400492DEB /* Assets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Assets+Generated.swift"; sourceTree = "<group>"; };
+		41CAA4EC29B4FC0400492DEB /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		C6254A1229B376DF00558130 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
-		C6303DFE29B39CB9002F96E4 /* Assets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Assets+Generated.swift"; sourceTree = "<group>"; };
-		C6303DFF29B39CB9002F96E4 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		C6B8E82229ACECDC009AAD8F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C6B8E82429ACED08009AAD8F /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C6B8E82529ACED4C009AAD8F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -77,11 +81,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C6254A1429B3785A00558130 /* Generated */ = {
+		41CAA4E429B4F86C00492DEB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				C6303DFE29B39CB9002F96E4 /* Assets+Generated.swift */,
-				C6303DFF29B39CB9002F96E4 /* Strings+Generated.swift */,
+				41CAA4E529B4F86C00492DEB /* Login */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		41CAA4E529B4F86C00492DEB /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				41CAA4E629B4F86C00492DEB /* LoginViewController.xib */,
+				41CAA4E729B4F86C00492DEB /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		41CAA4EA29B4F93900492DEB /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				41CAA4EB29B4FC0400492DEB /* Assets+Generated.swift */,
+				41CAA4EC29B4FC0400492DEB /* Strings+Generated.swift */,
 			);
 			path = Generated;
 			sourceTree = "<group>";
@@ -89,7 +110,7 @@
 		C6B8E81E29ACEC9E009AAD8F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C6254A1429B3785A00558130 /* Generated */,
+				41CAA4EA29B4F93900492DEB /* Generated */,
 				C6C7119C29ACDCBD00D58FE8 /* Assets.xcassets */,
 				C6B8E82329ACECDC009AAD8F /* Localizable.strings */,
 			);
@@ -116,6 +137,7 @@
 		C6C7119229ACDCBB00D58FE8 /* Blanball */ = {
 			isa = PBXGroup;
 			children = (
+				41CAA4E429B4F86C00492DEB /* Modules */,
 				C6FF395929B2042B003610F5 /* Configs */,
 				C6FF394C29B1E6BC003610F5 /* Common */,
 				C6C7119329ACDCBB00D58FE8 /* AppDelegate.swift */,
@@ -326,6 +348,7 @@
 				C6C7119D29ACDCBD00D58FE8 /* Assets.xcassets in Resources */,
 				C6C7119B29ACDCBB00D58FE8 /* Main.storyboard in Resources */,
 				C6FF396629B20FA7003610F5 /* InfoStage.plist in Resources */,
+				41CAA4E829B4F86C00492DEB /* LoginViewController.xib in Resources */,
 				C6254A1329B376E000558130 /* swiftgen.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,15 +386,16 @@
 				C6FF394E29B1F54B003610F5 /* APIClient.swift in Sources */,
 				C6FF395829B20399003610F5 /* EnviromentVars.swift in Sources */,
 				C6FF395629B201B2003610F5 /* AppConstansts .swift in Sources */,
-				C6303E0129B39CB9002F96E4 /* Strings+Generated.swift in Sources */,
 				C6FF394229AF9C86003610F5 /* HTTPMethod.swift in Sources */,
 				C6FF394B29B11C35003610F5 /* NetworkService.swift in Sources */,
-				C6303E0029B39CB9002F96E4 /* Assets+Generated.swift in Sources */,
 				C6FF393229AF85A7003610F5 /* BaseViewModel.swift in Sources */,
 				C6C7119429ACDCBB00D58FE8 /* AppDelegate.swift in Sources */,
 				C6FF395329B2009D003610F5 /* CommonService+Default.swift in Sources */,
+				41CAA4EE29B4FC0500492DEB /* Strings+Generated.swift in Sources */,
+				41CAA4E929B4F86C00492DEB /* LoginViewController.swift in Sources */,
 				C6FF393B29AF8C55003610F5 /* CommonService.swift in Sources */,
 				C6FF396D29B2377D003610F5 /* String+Extension.swift in Sources */,
+				41CAA4ED29B4FC0500492DEB /* Assets+Generated.swift in Sources */,
 				C6FF393029AF84AE003610F5 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
