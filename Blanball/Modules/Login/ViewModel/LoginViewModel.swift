@@ -7,10 +7,14 @@
 
 import Foundation
 import XCoordinator
+import Combine
 
 final class LoginViewModel: BaseViewModel<LoginViewModelState> {
     
     private let apiClient: LoginAPIClient
+    
+    private(set) var emailSubject = CurrentValueSubject<BlanRoundedTextFieldState, Never>(.idle)
+    private(set) var passwordSubject = CurrentValueSubject<BlanRoundedTextFieldState, Never>(.idle)
     
     init(apiClient: LoginAPIClient) {
         self.apiClient = apiClient
@@ -19,6 +23,12 @@ final class LoginViewModel: BaseViewModel<LoginViewModelState> {
     
     override func start() {
         updateState(newValue: .loading)
+    }
+    
+    func bindViewState(publisher: Published<BlanRoundedTextFieldState>.Publisher) {
+        publisher.sink { state in
+            
+        }.store(in: &cancellables)
     }
     
     private func fetchLogin() async {

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4146422329B6003E00E4F0BF /* BlanRoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4146422229B6003E00E4F0BF /* BlanRoundedTextField.swift */; };
+		4146422529B6118800E4F0BF /* EdgeInsetsTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4146422429B6118800E4F0BF /* EdgeInsetsTextField.swift */; };
+		4146422829B6127C00E4F0BF /* UIView+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4146422729B6127C00E4F0BF /* UIView+CornerRadius.swift */; };
+		4146422B29B652F400E4F0BF /* BlanRoundedTextFieldState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4146422A29B652F400E4F0BF /* BlanRoundedTextFieldState.swift */; };
+		41AE26A629B67B9D0072575B /* AppConstants+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AE26A529B67B9D0072575B /* AppConstants+Regex.swift */; };
 		41CAA4E829B4F86C00492DEB /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41CAA4E629B4F86C00492DEB /* LoginViewController.xib */; };
 		41CAA4E929B4F86C00492DEB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CAA4E729B4F86C00492DEB /* LoginViewController.swift */; };
 		41CAA4ED29B4FC0500492DEB /* Assets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CAA4EB29B4FC0400492DEB /* Assets+Generated.swift */; };
@@ -43,6 +48,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4146422229B6003E00E4F0BF /* BlanRoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlanRoundedTextField.swift; sourceTree = "<group>"; };
+		4146422429B6118800E4F0BF /* EdgeInsetsTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeInsetsTextField.swift; sourceTree = "<group>"; };
+		4146422729B6127C00E4F0BF /* UIView+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CornerRadius.swift"; sourceTree = "<group>"; };
+		4146422A29B652F400E4F0BF /* BlanRoundedTextFieldState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlanRoundedTextFieldState.swift; sourceTree = "<group>"; };
+		41AE26A529B67B9D0072575B /* AppConstants+Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppConstants+Regex.swift"; sourceTree = "<group>"; };
 		41CAA4E629B4F86C00492DEB /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		41CAA4E729B4F86C00492DEB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		41CAA4EB29B4FC0400492DEB /* Assets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Assets+Generated.swift"; sourceTree = "<group>"; };
@@ -95,6 +105,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4146422129B6000300E4F0BF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4146422929B652DF00E4F0BF /* BlanRoundedTextField */,
+				4146422429B6118800E4F0BF /* EdgeInsetsTextField.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4146422629B6126900E4F0BF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4146422729B6127C00E4F0BF /* UIView+CornerRadius.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4146422929B652DF00E4F0BF /* BlanRoundedTextField */ = {
+			isa = PBXGroup;
+			children = (
+				4146422229B6003E00E4F0BF /* BlanRoundedTextField.swift */,
+				4146422A29B652F400E4F0BF /* BlanRoundedTextFieldState.swift */,
+			);
+			path = BlanRoundedTextField;
+			sourceTree = "<group>";
+		};
 		41CAA4E429B4F86C00492DEB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +224,7 @@
 		C6C7119229ACDCBB00D58FE8 /* Blanball */ = {
 			isa = PBXGroup;
 			children = (
+				4146422129B6000300E4F0BF /* Views */,
 				41CAA4E429B4F86C00492DEB /* Modules */,
 				C6FF395929B2042B003610F5 /* Configs */,
 				C6FF394C29B1E6BC003610F5 /* Common */,
@@ -279,24 +316,18 @@
 		C6FF394F29B1F96F003610F5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4146422629B6126900E4F0BF /* Views */,
 				C6FF396B29B2376F003610F5 /* DataTypes */,
 				C6FF395129B20080003610F5 /* AppDefaults */,
-				C6FF395029B20079003610F5 /* Views */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		C6FF395029B20079003610F5 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		C6FF395129B20080003610F5 /* AppDefaults */ = {
 			isa = PBXGroup;
 			children = (
 				C6FF395229B2009D003610F5 /* CommonService+Default.swift */,
+				41AE26A529B67B9D0072575B /* AppConstants+Regex.swift */,
 			);
 			path = AppDefaults;
 			sourceTree = "<group>";
@@ -435,6 +466,7 @@
 			files = (
 				C6FF393D29AF992C003610F5 /* Configurable.swift in Sources */,
 				C6303E0829B502E7002F96E4 /* LoginAPIClient.swift in Sources */,
+				4146422329B6003E00E4F0BF /* BlanRoundedTextField.swift in Sources */,
 				C6FF394429AFB09C003610F5 /* NetworkError.swift in Sources */,
 				C6C7119829ACDCBB00D58FE8 /* ViewController.swift in Sources */,
 				C6FF394E29B1F54B003610F5 /* APIClient.swift in Sources */,
@@ -444,18 +476,22 @@
 				C6FF394229AF9C86003610F5 /* HTTPMethod.swift in Sources */,
 				41CAA4FA29B4FE5900492DEB /* LoginViewModel.swift in Sources */,
 				C6FF394B29B11C35003610F5 /* NetworkService.swift in Sources */,
+				4146422829B6127C00E4F0BF /* UIView+CornerRadius.swift in Sources */,
 				C6FF393229AF85A7003610F5 /* BaseViewModel.swift in Sources */,
 				C6C7119429ACDCBB00D58FE8 /* AppDelegate.swift in Sources */,
 				C6FF395329B2009D003610F5 /* CommonService+Default.swift in Sources */,
 				41CAA4EE29B4FC0500492DEB /* Strings+Generated.swift in Sources */,
+				4146422529B6118800E4F0BF /* EdgeInsetsTextField.swift in Sources */,
 				41CAA4F629B4FD3A00492DEB /* LoginViewModelState.swift in Sources */,
 				41CAA4E929B4F86C00492DEB /* LoginViewController.swift in Sources */,
+				41AE26A629B67B9D0072575B /* AppConstants+Regex.swift in Sources */,
 				C6303E0D29B50519002F96E4 /* Encodable+Extension.swift in Sources */,
 				C6303E0629B502CA002F96E4 /* LoginAPI.swift in Sources */,
 				C6FF393B29AF8C55003610F5 /* CommonService.swift in Sources */,
 				C6303E0B29B5042F002F96E4 /* LoginRequestModel.swift in Sources */,
 				C6FF396D29B2377D003610F5 /* String+Extension.swift in Sources */,
 				41CAA4ED29B4FC0500492DEB /* Assets+Generated.swift in Sources */,
+				4146422B29B652F400E4F0BF /* BlanRoundedTextFieldState.swift in Sources */,
 				C6FF393029AF84AE003610F5 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

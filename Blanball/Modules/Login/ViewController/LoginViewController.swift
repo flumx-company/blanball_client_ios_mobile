@@ -13,7 +13,7 @@ class LoginViewController: BaseViewController<LoginViewModel> {
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var loginTextField: UITextField!
+    @IBOutlet weak var loginTextField: BlanRoundedTextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var checkBoxButton: UIButton!
     @IBOutlet weak var agreementLabel: UILabel!
@@ -24,7 +24,7 @@ class LoginViewController: BaseViewController<LoginViewModel> {
     }
     
     override func setupView() {
-        
+        viewModel.emailSubject.send(.idle)
     }
     
     override func bindViewModel() {

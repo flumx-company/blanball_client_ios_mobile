@@ -17,7 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
 //        self.window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainViewController")
-        self.window?.rootViewController = LoginViewController(nibName: "LoginViewController", bundle: nil)
+        let viewModel = LoginViewModel(apiClient: LoginAPIClientImpl())
+        self.window?.rootViewController = LoginViewController(viewModel: viewModel)
         
         return true
     }
