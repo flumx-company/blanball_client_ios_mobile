@@ -31,7 +31,6 @@ class BaseViewController<ViewModel: AnyObject>: UIViewController {
         super.viewDidLoad()
         setupView()
         bindViewModel()
-        Assets.Colors.Text.Sublet.
     }
 
     func setupView() {

@@ -10,10 +10,15 @@ import XCoordinator
 
 final class LoginViewModel: BaseViewModel<LoginViewModelState> {
     
+    private let router: UnownedRouter<LoginRoute>
     private let apiClient: LoginAPIClient
     
-    init(apiClient: LoginAPIClient) {
+    init(
+        router: UnownedRouter<LoginRoute>,
+        apiClient: LoginAPIClient
+    ) {
         self.apiClient = apiClient
+        self.router = router
         super.init(state: .started)
     }
     
