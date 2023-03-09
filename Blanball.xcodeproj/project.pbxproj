@@ -10,6 +10,7 @@
 		C6254A1329B376E000558130 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = C6254A1229B376DF00558130 /* swiftgen.yml */; };
 		C6303E0029B39CB9002F96E4 /* Assets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6303DFE29B39CB9002F96E4 /* Assets+Generated.swift */; };
 		C6303E0129B39CB9002F96E4 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6303DFF29B39CB9002F96E4 /* Strings+Generated.swift */; };
+		C6303E1529BA2CF1002F96E4 /* Fonts+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6303E1429BA2CF1002F96E4 /* Fonts+Generated.swift */; };
 		C6B8E82129ACECDC009AAD8F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C6B8E82329ACECDC009AAD8F /* Localizable.strings */; };
 		C6C7119429ACDCBB00D58FE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C7119329ACDCBB00D58FE8 /* AppDelegate.swift */; };
 		C6C7119829ACDCBB00D58FE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C7119729ACDCBB00D58FE8 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 		C6254A1229B376DF00558130 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		C6303DFE29B39CB9002F96E4 /* Assets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Assets+Generated.swift"; sourceTree = "<group>"; };
 		C6303DFF29B39CB9002F96E4 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
+		C6303E1429BA2CF1002F96E4 /* Fonts+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Fonts+Generated.swift"; sourceTree = "<group>"; };
 		C6B8E82229ACECDC009AAD8F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C6B8E82429ACED08009AAD8F /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C6B8E82529ACED4C009AAD8F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 		C6254A1429B3785A00558130 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
+				C6303E1429BA2CF1002F96E4 /* Fonts+Generated.swift */,
 				C6303DFE29B39CB9002F96E4 /* Assets+Generated.swift */,
 				C6303DFF29B39CB9002F96E4 /* Strings+Generated.swift */,
 			);
@@ -368,6 +371,7 @@
 				C6FF394B29B11C35003610F5 /* NetworkService.swift in Sources */,
 				C6303E0029B39CB9002F96E4 /* Assets+Generated.swift in Sources */,
 				C6FF393229AF85A7003610F5 /* BaseViewModel.swift in Sources */,
+				C6303E1529BA2CF1002F96E4 /* Fonts+Generated.swift in Sources */,
 				C6C7119429ACDCBB00D58FE8 /* AppDelegate.swift in Sources */,
 				C6FF395329B2009D003610F5 /* CommonService+Default.swift in Sources */,
 				C6FF393B29AF8C55003610F5 /* CommonService.swift in Sources */,
