@@ -27,6 +27,18 @@ class LoginViewController: BaseViewController<LoginViewModel> {
         viewModel.emailSubject.send(.idle)
     }
     
+    private func configureUI() {
+        loginTextField.configure(
+            title: "Логін",
+            placeholder: "Введіть логін"
+        )
+        passwordTextField.configure(
+            title: "Пароль",
+            placeholder: "Введіть пароль",
+            isSecure: true
+        )
+    }
+    
     override func bindViewModel() {
         viewModel
             .$state

@@ -13,3 +13,8 @@ xcassets:
       output: Blanball/Resources/Generated/Assets+Generated.swift
       params:
           enumName: Assets
+fonts:
+  inputs: Blanball/Resources/fonts/
+  outputs:
+    templateName: swift5
+    output: Blanball/Resources/Generated/Fonts+Generated.swift

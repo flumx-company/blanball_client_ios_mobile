@@ -67,8 +67,6 @@ class BlanRoundedTextField: UIView {
         return tf
     }()
     
-//    eye-off
-    
     private lazy var secureFieldButton: UIButton = {
         let button = UIButton(type: .custom)
         button.imageEdgeInsets = Constants.secureButtonInsets
@@ -109,16 +107,18 @@ class BlanRoundedTextField: UIView {
     // TODO: Make single configure function
     
     func configure(
-        title: String?,
+        title: String? = nil,
         with titleFont: UIFont? = nil,
-        text: String?,
+        text: String? = nil,
         with textFont: UIFont? = nil,
-        placeholder: String?,
+        placeholder: String? = nil,
         with placeholderFont: UIFont? = nil,
         isSecure: Bool = false,
         pattern: String? = nil
     ) {
         editingTextField.text = text
+        editingTextField.placeholder = placeholder
+        
         setSecureEntryMode(isSecure)
     }
     
@@ -275,5 +275,26 @@ extension BlanRoundedTextField {
             bottom: 0,
             right: 0
         )
+    }
+}
+
+
+class BlanCustomEmptyButton: UIButton {
+    
+    private let switchedBackgroundColor: (UIColor?, UIColor?) = (nil, nil)
+    private let switchedTintColor: (UIColor?, UIColor?) = (nil, nil)
+    private let switchedBorderColor: (UIColor?, UIColor?) = (nil, nil)
+    
+    func configure(
+        title: String? = nil,
+        tintEnabled: UIColor? = nil,
+        tintDisabled: UIColor? = nil,
+        imageEnabled: UIImage? = nil,
+        imageDisabled: UIImage? = nil,
+        backgroundEnabled: UIColor? = nil,
+        backgroundDisabled: UIColor? = nil,
+        borderDisabled: UIColor? = nil
+    ) {
+        
     }
 }
