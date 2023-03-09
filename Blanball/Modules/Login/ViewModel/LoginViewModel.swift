@@ -11,18 +11,21 @@ import Combine
 
 final class LoginViewModel: BaseViewModel<LoginViewModelState> {
     
+    private let router: UnownedRouter<LoginRoute>
     private let apiClient: LoginAPIClient
     
-    private(set) var emailSubject = CurrentValueSubject<BlanRoundedTextFieldState, Never>(.idle)
-    private(set) var passwordSubject = CurrentValueSubject<BlanRoundedTextFieldState, Never>(.idle)
-    
-    init(apiClient: LoginAPIClient) {
+    init(
+        router: UnownedRouter<LoginRoute>,
+        apiClient: LoginAPIClient
+    ) {
         self.apiClient = apiClient
+        self.router = router
         super.init(state: .started)
     }
     
     override func start() {
         updateState(newValue: .loading)
+        router.trigger(.resetPassword)
     }
     
     func bindViewState(publisher: Published<BlanRoundedTextFieldState>.Publisher) {
@@ -34,7 +37,7 @@ final class LoginViewModel: BaseViewModel<LoginViewModelState> {
     private func fetchLogin() async {
         Task { 
             do {
-                let login = try await self.apiClient.login(reqModel: .init(email: .empty, password: .empty))
+                _ = try await self.apiClient.login(reqModel: .init(email: .empty, password: .empty))
                 self.updateState(newValue: .updated)
             } catch {
                 self.updateState(newValue: .failure(error: error))

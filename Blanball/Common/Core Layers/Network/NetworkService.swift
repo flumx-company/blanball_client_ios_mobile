@@ -17,6 +17,7 @@ final class NetworkService {
 
 extension NetworkService: NetworkManager {
     func request<T: Decodable>(_ model: CommonService) async throws -> T {
+        
         let urlRequest = try model.asURLRequest()
         let (data, response) = try await URLSession.shared.data(for: urlRequest)
         

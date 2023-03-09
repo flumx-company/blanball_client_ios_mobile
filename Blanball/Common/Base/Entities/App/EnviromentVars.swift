@@ -42,4 +42,8 @@ struct EnvironmentVars {
     static let apiHost: String = {
         return "http://\(baseApiHost)/api/"
     }()
+    
+    static let isInHouseMode: Bool = {
+        return true
+    }()
 }
