@@ -17,10 +17,12 @@ class LoginViewController: BaseViewController<LoginViewModel> {
     @IBOutlet private weak var passwordTextField: BlanRoundedTextField!
     @IBOutlet private weak var checkBoxButton: UIButton!
     @IBOutlet private weak var agreementLabel: UILabel!
+    @IBOutlet private weak var loginButton: CommonButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.start()
+        configureUI()
     }
     
     override func setupView() {
@@ -36,6 +38,12 @@ class LoginViewController: BaseViewController<LoginViewModel> {
             title: "Пароль",
             placeholder: "Введіть пароль",
             isSecure: true
+        )
+        loginButton.configure(
+            title: "Увійти",
+            tintEnabled: Assets.Colors.Text.inverse.color,
+            backgroundEnabled: Assets.Colors.Bg.accent.color,
+            backgroundDisabled: Assets.Colors.Bg.accent.color.withAlphaComponent(0.7)
         )
     }
     

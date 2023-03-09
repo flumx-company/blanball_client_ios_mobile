@@ -14,6 +14,8 @@ class BlanRoundedTextField: UIView {
     
     @Published private(set) var state: BlanRoundedTextFieldState
     
+    var pattern: String?
+    
     override var backgroundColor: UIColor? {
         didSet {
             labelContainerView.backgroundColor = backgroundColor
@@ -40,7 +42,6 @@ class BlanRoundedTextField: UIView {
         let label = UILabel(frame: .zero)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .left
-        label.text = "Логін"
         return label
     }()
     
@@ -50,6 +51,7 @@ class BlanRoundedTextField: UIView {
         label.textAlignment = .left
         label.textColor = .red
         label.font = UIFont.systemFont(ofSize: 12)
+        label.isHidden = true
         label.text = "* Перевірте правильність введених даних"
         return label
     }()
@@ -64,6 +66,7 @@ class BlanRoundedTextField: UIView {
         tf.layer.borderColor = Assets.Colors.Border.Placeholder.default.color.cgColor
         tf.apply(cornerRadius: Constants.cornerRadius)
         tf.delegate = self
+        tf.isSecureTextEntry = false
         return tf
     }()
     
@@ -99,7 +102,6 @@ class BlanRoundedTextField: UIView {
         super.init(coder: coder)
         setupUI()
         setupConstraints()
-        setSecureEntryMode(true)
     }
     
     // MARK: - Internal properties -
@@ -116,9 +118,9 @@ class BlanRoundedTextField: UIView {
         isSecure: Bool = false,
         pattern: String? = nil
     ) {
+        titleLabel.text = title
         editingTextField.text = text
         editingTextField.placeholder = placeholder
-        
         setSecureEntryMode(isSecure)
     }
     
@@ -202,7 +204,7 @@ class BlanRoundedTextField: UIView {
                 constant: -Constants.containerHorizontalSpacing
             ),
             labelContainerView.rightAnchor.constraint(
-                equalTo: titleLabel.rightAnchor
+                equalTo: titleLabel.rightAnchor, constant: 4
             ),
             labelContainerView.centerYAnchor.constraint(
                 equalTo: editingTextField.topAnchor
@@ -275,26 +277,5 @@ extension BlanRoundedTextField {
             bottom: 0,
             right: 0
         )
-    }
-}
-
-
-class BlanCustomEmptyButton: UIButton {
-    
-    private let switchedBackgroundColor: (UIColor?, UIColor?) = (nil, nil)
-    private let switchedTintColor: (UIColor?, UIColor?) = (nil, nil)
-    private let switchedBorderColor: (UIColor?, UIColor?) = (nil, nil)
-    
-    func configure(
-        title: String? = nil,
-        tintEnabled: UIColor? = nil,
-        tintDisabled: UIColor? = nil,
-        imageEnabled: UIImage? = nil,
-        imageDisabled: UIImage? = nil,
-        backgroundEnabled: UIColor? = nil,
-        backgroundDisabled: UIColor? = nil,
-        borderDisabled: UIColor? = nil
-    ) {
-        
     }
 }
