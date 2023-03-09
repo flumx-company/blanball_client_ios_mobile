@@ -15,6 +15,13 @@
 		41CAA4F829B4FDBB00492DEB /* ViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CAA4F729B4FDBB00492DEB /* ViewModelState.swift */; };
 		41CAA4FA29B4FE5900492DEB /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CAA4F929B4FE5900492DEB /* LoginViewModel.swift */; };
 		C6254A1329B376E000558130 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = C6254A1229B376DF00558130 /* swiftgen.yml */; };
+		C6303E0029B39CB9002F96E4 /* Assets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6303DFE29B39CB9002F96E4 /* Assets+Generated.swift */; };
+		C6303E0129B39CB9002F96E4 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6303DFF29B39CB9002F96E4 /* Strings+Generated.swift */; };
+		C6303E1529BA2CF1002F96E4 /* Fonts+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6303E1429BA2CF1002F96E4 /* Fonts+Generated.swift */; };
+		C6303E1829BA2FF7002F96E4 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6303E1729BA2FF7002F96E4 /* StorageManager.swift */; };
+		C6303E1B29BA39B4002F96E4 /* RNCryptor in Frameworks */ = {isa = PBXBuildFile; productRef = C6303E1A29BA39B4002F96E4 /* RNCryptor */; };
+		C6303E1E29BA3ABB002F96E4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C6303E1D29BA3ABB002F96E4 /* SnapKit */; };
+		C6303E2029BA3ABB002F96E4 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = C6303E1F29BA3ABB002F96E4 /* SnapKit-Dynamic */; };
 		C6303E0629B502CA002F96E4 /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6303E0529B502CA002F96E4 /* LoginAPI.swift */; };
 		C6303E0829B502E7002F96E4 /* LoginAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6303E0729B502E7002F96E4 /* LoginAPIClient.swift */; };
 		C6303E0B29B5042F002F96E4 /* LoginRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6303E0A29B5042F002F96E4 /* LoginRequestModel.swift */; };
@@ -51,6 +58,10 @@
 		41CAA4F729B4FDBB00492DEB /* ViewModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelState.swift; sourceTree = "<group>"; };
 		41CAA4F929B4FE5900492DEB /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		C6254A1229B376DF00558130 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
+		C6303DFE29B39CB9002F96E4 /* Assets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Assets+Generated.swift"; sourceTree = "<group>"; };
+		C6303DFF29B39CB9002F96E4 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
+		C6303E1429BA2CF1002F96E4 /* Fonts+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Fonts+Generated.swift"; sourceTree = "<group>"; };
+		C6303E1729BA2FF7002F96E4 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		C6303E0529B502CA002F96E4 /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
 		C6303E0729B502E7002F96E4 /* LoginAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPIClient.swift; sourceTree = "<group>"; };
 		C6303E0A29B5042F002F96E4 /* LoginRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestModel.swift; sourceTree = "<group>"; };
@@ -87,8 +98,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6303E2029BA3ABB002F96E4 /* SnapKit-Dynamic in Frameworks */,
 				C6FF393729AF886A003610F5 /* XCoordinatorCombine in Frameworks */,
+				C6303E1E29BA3ABB002F96E4 /* SnapKit in Frameworks */,
 				C6FF393529AF886A003610F5 /* XCoordinator in Frameworks */,
+				C6303E1B29BA39B4002F96E4 /* RNCryptor in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +189,14 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
+		C6303E1629BA2FDE002F96E4 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				C6303E1729BA2FF7002F96E4 /* StorageManager.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
 		C6B8E81E29ACEC9E009AAD8F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +245,7 @@
 				C6303E0E29B7666C002F96E4 /* Navigation */,
 				C6FF392D29AF846B003610F5 /* Module */,
 				C6FF392E29AF8473003610F5 /* Network */,
+				C6303E1629BA2FDE002F96E4 /* Storage */,
 			);
 			path = "Core Layers";
 			sourceTree = "<group>";
@@ -364,6 +387,9 @@
 			packageProductDependencies = (
 				C6FF393429AF886A003610F5 /* XCoordinator */,
 				C6FF393629AF886A003610F5 /* XCoordinatorCombine */,
+				C6303E1A29BA39B4002F96E4 /* RNCryptor */,
+				C6303E1D29BA3ABB002F96E4 /* SnapKit */,
+				C6303E1F29BA3ABB002F96E4 /* SnapKit-Dynamic */,
 			);
 			productName = Blanball;
 			productReference = C6C7119029ACDCBB00D58FE8 /* Blanball.app */;
@@ -397,6 +423,8 @@
 			mainGroup = C6C7118729ACDCBB00D58FE8;
 			packageReferences = (
 				C6FF393329AF886A003610F5 /* XCRemoteSwiftPackageReference "XCoordinator" */,
+				C6303E1929BA39B4002F96E4 /* XCRemoteSwiftPackageReference "RNCryptor" */,
+				C6303E1C29BA3ABB002F96E4 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = C6C7119129ACDCBB00D58FE8 /* Products */;
 			projectDirPath = "";
@@ -452,6 +480,8 @@
 				C6303E0829B502E7002F96E4 /* LoginAPIClient.swift in Sources */,
 				C6303E1029B76681002F96E4 /* AppCoordinator.swift in Sources */,
 				C6FF394429AFB09C003610F5 /* NetworkError.swift in Sources */,
+				C6C7119829ACDCBB00D58FE8 /* ViewController.swift in Sources */,
+				C6303E1829BA2FF7002F96E4 /* StorageManager.swift in Sources */,
 				C6FF394E29B1F54B003610F5 /* APIClient.swift in Sources */,
 				C6FF395829B20399003610F5 /* EnviromentVars.swift in Sources */,
 				41CAA4F829B4FDBB00492DEB /* ViewModelState.swift in Sources */,
@@ -902,6 +932,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C6303E1929BA39B4002F96E4 /* XCRemoteSwiftPackageReference "RNCryptor" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RNCryptor/RNCryptor.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		C6303E1C29BA3ABB002F96E4 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		C6FF393329AF886A003610F5 /* XCRemoteSwiftPackageReference "XCoordinator" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/quickbirdstudios/XCoordinator.git";
@@ -913,6 +959,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C6303E1A29BA39B4002F96E4 /* RNCryptor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C6303E1929BA39B4002F96E4 /* XCRemoteSwiftPackageReference "RNCryptor" */;
+			productName = RNCryptor;
+		};
+		C6303E1D29BA3ABB002F96E4 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C6303E1C29BA3ABB002F96E4 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		C6303E1F29BA3ABB002F96E4 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C6303E1C29BA3ABB002F96E4 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
 		C6FF393429AF886A003610F5 /* XCoordinator */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C6FF393329AF886A003610F5 /* XCRemoteSwiftPackageReference "XCoordinator" */;
