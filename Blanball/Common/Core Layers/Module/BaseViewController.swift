@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BaseViewController<ViewModel>: UIViewController {
+class BaseViewController<ViewModel: AnyObject>: UIViewController {
 
     // MARK: - Public properties
     
