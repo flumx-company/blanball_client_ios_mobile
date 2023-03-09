@@ -8,24 +8,12 @@
 import Foundation
 import RNCryptor
 
-struct StorageContainer<T>: Codable where T: Codable {
-    let value: T
-}
-
 protocol StorageManager {
     func save<T>(_ value: T, type: T.Type, forKey key: StorageKey) where T: Codable
     func getValue<T>(forKey key: StorageKey) -> T? where T: Codable
     func removeValue(forKey key: StorageKey)
     func clearAllData()
 }
-
-enum StorageKey: String, CaseIterable {
-    case didUserWatchOnboarding = "kDidUserWatchOnboarding"
-    case accessToken = "kJWTAccessToken"
-    case refreshToken = "kJWTRefreshToken"
-    case randomKey = "kRandomKey"
-}
-
 
 final class StorageManagerImpl: StorageManager {
     private enum StorageType {
@@ -34,7 +22,7 @@ final class StorageManagerImpl: StorageManager {
         case deviceStorage
         
         init(storageKey: StorageKey) {
-            switch StorageKey {
+            switch storageKey {
             case .accessToken, .refreshToken, .randomKey:
                 self = .keychain
             default:
@@ -62,14 +50,14 @@ final class StorageManagerImpl: StorageManager {
                 saveInStorage(data, withName: key.rawValue)
             }
         } catch let err {
-            log(err)
+            print(err)
             return
         }
     }
     
     func getValue<T>(forKey key: StorageKey) -> T? where T: Codable {
         let data: Data?
-        switch StorageType(StorageKey: key) {
+        switch StorageType(storageKey: key) {
         case .keychain:
             data = getKeychain(withKey: key.rawValue)
         case .userDefaults:
@@ -79,13 +67,13 @@ final class StorageManagerImpl: StorageManager {
         }
         guard let result = data else { return nil }
         
-        let decodedContainer = try? decoder.decode(FailableDecodable<StoreContainer<T>>.self, from: result)
+        let decodedContainer = try? decoder.decode(OptionalDecodable<StorageContainer<T>>.self, from: result)
         
         return decodedContainer?.value?.value
     }
     
     func removeValue(forKey key: StorageKey) {
-        switch StorageType(StorageKey: key) {
+        switch StorageType(storageKey: key) {
         case .keychain:
             saveKeychain(nil, forKey: key.rawValue)
         case .userDefaults:
@@ -97,8 +85,8 @@ final class StorageManagerImpl: StorageManager {
     }
     
     func clearAllData() {
-        StorageKey.deletableCases.forEach { (key) in
-            switch StorageType(StorageKey: key) {
+        StorageKey.deletableKeys.forEach { (key) in
+            switch StorageType(storageKey: key) {
             case .keychain:
                 saveKeychain(nil, forKey: key.rawValue)
             case .userDefaults:
@@ -123,8 +111,7 @@ private extension StorageManagerImpl {
         do {
             try createDirectoryIfNeeded()
         } catch let error as NSError {
-            Crashlytics.crashlytics().record(error: error)
-            log("Could not create directory by reason: \(error.localizedDescription)")
+            print("Could not create directory by reason: \(error.localizedDescription)")
         }
         
         guard let data = data else { return }
@@ -132,7 +119,7 @@ private extension StorageManagerImpl {
         
         let filePath = filesDirectoryUrl().appendingPathComponent(name)
         FileManager.default.createFile(atPath: filePath.path, contents: cipherText, attributes: [.protectionKey: FileProtectionType.complete])
-        log("Successfully saved file with name \(name)")
+        print("Successfully saved file with name \(name)")
     }
     
     func getFileInStorage(withName name: String) -> Data? {
@@ -143,7 +130,7 @@ private extension StorageManagerImpl {
                 let originalData = try RNCryptor.decrypt(data: cipherData, withPassword: actualRandomKey())
                 return originalData
             } catch {
-                log("Could not load file at directory by reason: \(error.localizedDescription)")
+                print("Could not load file at directory by reason: \(error.localizedDescription)")
             }
         }
         return nil
@@ -154,7 +141,7 @@ private extension StorageManagerImpl {
         do {
             try FileManager.default.removeItem(at: filePath)
         } catch let error as NSError {
-            log("Could not remove file with name: \(name) by reason: \(error.localizedDescription)")
+            print("Could not remove file with name: \(name) by reason: \(error.localizedDescription)")
         }
     }
     
@@ -184,11 +171,11 @@ private extension StorageManagerImpl {
                 do {
                     try fileManager.removeItem(at: file)
                 } catch let error as NSError {
-                    log("Ooops! Something went wrong: \(error)")
+                    print("Ooops! Something went wrong: \(error)")
                 }
             }
         } catch let error as NSError {
-            log(error.localizedDescription)
+            print(error.localizedDescription)
         }
     }
 }
@@ -208,22 +195,22 @@ private extension StorageManagerImpl {
 // MARK: - Helping Keychain Methods
 private extension StorageManagerImpl {
     func saveKeychain(_ data: Data?, forKey key: String) {
-        DispatchQueue.global().sync(flags: .barrier) {
-            let query = keychainQuery(withKey: key)
+        DispatchQueue.global().sync(flags: .barrier) { [weak self] in
+            guard let query = self?.keychainQuery(withKey: key) else { return }
             
             if SecItemCopyMatching(query, nil) == noErr {
                 if let data = data {
                     let status = SecItemUpdate(query, NSDictionary(dictionary: [kSecValueData: data]))
-                    log("Update status: \(status), for key: \(key)")
+                    print("Update status: \(status), for key: \(key)")
                 } else {
                     let status = SecItemDelete(query)
-                    log("Delete status: \(status), for key: \(key)")
+                    print("Delete status: \(status), for key: \(key)")
                 }
             } else {
                 if let data = data {
                     query.setValue(data, forKey: kSecValueData as String)
                     let status = SecItemAdd(query, nil)
-                    log("Update status: \(status), for key: \(key)")
+                    print("Update status: \(status), for key: \(key)")
                 }
             }
         }
@@ -242,7 +229,7 @@ private extension StorageManagerImpl {
             let resultsData = resultsDict.value(forKey: kSecValueData as String) as? Data,
             status == noErr
         else {
-            log("Load status: \(status), for key: \(key)")
+            print("Load status: \(status), for key: \(key)")
             return nil
         }
         return resultsData
@@ -252,7 +239,7 @@ private extension StorageManagerImpl {
         let result = NSMutableDictionary()
         result.setValue(kSecClassGenericPassword, forKey: kSecClass as String)
         result.setValue(key, forKey: kSecAttrService as String)
-        result.setValue(kSecAttrAccessibleAlwaysThisDeviceOnly, forKey: kSecAttrAccessible as String)
+        result.setValue(kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly, forKey: kSecAttrAccessible as String)
         return result
     }
 }

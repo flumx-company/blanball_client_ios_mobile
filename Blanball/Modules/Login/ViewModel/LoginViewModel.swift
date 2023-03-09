@@ -24,12 +24,13 @@ final class LoginViewModel: BaseViewModel<LoginViewModelState> {
     
     override func start() {
         updateState(newValue: .loading)
+        router.trigger(.resetPassword)
     }
     
     private func fetchLogin() async {
         Task { 
             do {
-                let login = try await self.apiClient.login(reqModel: .init(email: .empty, password: .empty))
+                _ = try await self.apiClient.login(reqModel: .init(email: .empty, password: .empty))
                 self.updateState(newValue: .updated)
             } catch {
                 self.updateState(newValue: .failure(error: error))

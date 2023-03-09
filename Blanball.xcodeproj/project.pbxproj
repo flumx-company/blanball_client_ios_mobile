@@ -15,19 +15,58 @@
 		41CAA4F829B4FDBB00492DEB /* ViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CAA4F729B4FDBB00492DEB /* ViewModelState.swift */; };
 		41CAA4FA29B4FE5900492DEB /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CAA4F929B4FE5900492DEB /* LoginViewModel.swift */; };
 		C6254A1329B376E000558130 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = C6254A1229B376DF00558130 /* swiftgen.yml */; };
-		C6303E0029B39CB9002F96E4 /* Assets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6303DFE29B39CB9002F96E4 /* Assets+Generated.swift */; };
-		C6303E0129B39CB9002F96E4 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6303DFF29B39CB9002F96E4 /* Strings+Generated.swift */; };
-		C6303E1529BA2CF1002F96E4 /* Fonts+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6303E1429BA2CF1002F96E4 /* Fonts+Generated.swift */; };
-		C6303E1829BA2FF7002F96E4 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6303E1729BA2FF7002F96E4 /* StorageManager.swift */; };
-		C6303E1B29BA39B4002F96E4 /* RNCryptor in Frameworks */ = {isa = PBXBuildFile; productRef = C6303E1A29BA39B4002F96E4 /* RNCryptor */; };
-		C6303E1E29BA3ABB002F96E4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C6303E1D29BA3ABB002F96E4 /* SnapKit */; };
-		C6303E2029BA3ABB002F96E4 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = C6303E1F29BA3ABB002F96E4 /* SnapKit-Dynamic */; };
 		C6303E0629B502CA002F96E4 /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6303E0529B502CA002F96E4 /* LoginAPI.swift */; };
 		C6303E0829B502E7002F96E4 /* LoginAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6303E0729B502E7002F96E4 /* LoginAPIClient.swift */; };
 		C6303E0B29B5042F002F96E4 /* LoginRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6303E0A29B5042F002F96E4 /* LoginRequestModel.swift */; };
 		C6303E0D29B50519002F96E4 /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6303E0C29B50519002F96E4 /* Encodable+Extension.swift */; };
 		C6303E1029B76681002F96E4 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6303E0F29B76681002F96E4 /* AppCoordinator.swift */; };
 		C6303E1329B9F0BF002F96E4 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6303E1229B9F0BF002F96E4 /* LoginCoordinator.swift */; };
+		C6303E1829BA2FF7002F96E4 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6303E1729BA2FF7002F96E4 /* StorageManager.swift */; };
+		C6303E1B29BA39B4002F96E4 /* RNCryptor in Frameworks */ = {isa = PBXBuildFile; productRef = C6303E1A29BA39B4002F96E4 /* RNCryptor */; };
+		C6303E2229BA4315002F96E4 /* OptionalDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6303E2129BA4315002F96E4 /* OptionalDecodable.swift */; };
+		C6303E2529BA43CE002F96E4 /* StorageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6303E2429BA43CE002F96E4 /* StorageContainer.swift */; };
+		C6303E2729BA43D9002F96E4 /* StorageKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6303E2629BA43D9002F96E4 /* StorageKey.swift */; };
+		C6303E2A29BA5318002F96E4 /* AuthorizationInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6303E2929BA5318002F96E4 /* AuthorizationInterceptor.swift */; };
+		C6303E2E29BA5750002F96E4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C6303E2D29BA5750002F96E4 /* SnapKit */; };
+		C6303E9229BA60B6002F96E4 /* Inter-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C6303E7F29BA60B5002F96E4 /* Inter-SemiBold.otf */; };
+		C6303E9329BA60B6002F96E4 /* Inter-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = C6303E8029BA60B5002F96E4 /* Inter-Medium.otf */; };
+		C6303E9429BA60B6002F96E4 /* Inter-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = C6303E8129BA60B5002F96E4 /* Inter-Thin.otf */; };
+		C6303E9529BA60B6002F96E4 /* Inter-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C6303E8229BA60B5002F96E4 /* Inter-Regular.otf */; };
+		C6303E9629BA60B6002F96E4 /* Inter-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C6303E8329BA60B5002F96E4 /* Inter-ThinItalic.otf */; };
+		C6303E9729BA60B6002F96E4 /* Inter-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C6303E8429BA60B5002F96E4 /* Inter-Bold.otf */; };
+		C6303E9829BA60B6002F96E4 /* Inter-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = C6303E8529BA60B5002F96E4 /* Inter-Light.otf */; };
+		C6303E9929BA60B6002F96E4 /* Inter-ExtraBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C6303E8629BA60B5002F96E4 /* Inter-ExtraBoldItalic.otf */; };
+		C6303E9A29BA60B6002F96E4 /* Inter-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C6303E8729BA60B5002F96E4 /* Inter-ExtraBold.otf */; };
+		C6303E9B29BA60B6002F96E4 /* Inter-V.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6303E8829BA60B5002F96E4 /* Inter-V.ttf */; };
+		C6303E9C29BA60B6002F96E4 /* Inter-SemiBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C6303E8929BA60B5002F96E4 /* Inter-SemiBoldItalic.otf */; };
+		C6303E9D29BA60B6002F96E4 /* Inter-ExtraLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C6303E8A29BA60B5002F96E4 /* Inter-ExtraLightItalic.otf */; };
+		C6303E9E29BA60B6002F96E4 /* Inter-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C6303E8B29BA60B5002F96E4 /* Inter-BoldItalic.otf */; };
+		C6303E9F29BA60B6002F96E4 /* Inter-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C6303E8C29BA60B5002F96E4 /* Inter-LightItalic.otf */; };
+		C6303EA029BA60B6002F96E4 /* Inter-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C6303E8D29BA60B5002F96E4 /* Inter-BlackItalic.otf */; };
+		C6303EA129BA60B6002F96E4 /* Inter-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = C6303E8E29BA60B5002F96E4 /* Inter-Black.otf */; };
+		C6303EA229BA60B6002F96E4 /* Inter-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C6303E8F29BA60B5002F96E4 /* Inter-Italic.otf */; };
+		C6303EA329BA60B6002F96E4 /* Inter-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C6303E9029BA60B6002F96E4 /* Inter-MediumItalic.otf */; };
+		C6303EA429BA60B6002F96E4 /* Inter-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = C6303E9129BA60B6002F96E4 /* Inter-ExtraLight.otf */; };
+		C6303EB829BA60CF002F96E4 /* Exo2-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6303EA629BA60CF002F96E4 /* Exo2-Thin.ttf */; };
+		C6303EB929BA60CF002F96E4 /* Exo2-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6303EA729BA60CF002F96E4 /* Exo2-ExtraBold.ttf */; };
+		C6303EBA29BA60CF002F96E4 /* Exo2-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6303EA829BA60CF002F96E4 /* Exo2-Italic.ttf */; };
+		C6303EBB29BA60CF002F96E4 /* Exo2-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6303EA929BA60CF002F96E4 /* Exo2-ExtraLight.ttf */; };
+		C6303EBC29BA60CF002F96E4 /* Exo2-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6303EAA29BA60CF002F96E4 /* Exo2-ThinItalic.ttf */; };
+		C6303EBD29BA60CF002F96E4 /* Exo2-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6303EAB29BA60CF002F96E4 /* Exo2-BoldItalic.ttf */; };
+		C6303EBE29BA60CF002F96E4 /* Exo2-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6303EAC29BA60CF002F96E4 /* Exo2-Regular.ttf */; };
+		C6303EBF29BA60CF002F96E4 /* Exo2-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6303EAD29BA60CF002F96E4 /* Exo2-Bold.ttf */; };
+		C6303EC029BA60CF002F96E4 /* Exo2-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6303EAE29BA60CF002F96E4 /* Exo2-Light.ttf */; };
+		C6303EC129BA60CF002F96E4 /* Exo2-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6303EAF29BA60CF002F96E4 /* Exo2-ExtraBoldItalic.ttf */; };
+		C6303EC229BA60CF002F96E4 /* Exo2-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6303EB029BA60CF002F96E4 /* Exo2-BlackItalic.ttf */; };
+		C6303EC329BA60CF002F96E4 /* Exo2-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6303EB129BA60CF002F96E4 /* Exo2-Black.ttf */; };
+		C6303EC429BA60CF002F96E4 /* Exo2-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6303EB229BA60CF002F96E4 /* Exo2-ExtraLightItalic.ttf */; };
+		C6303EC529BA60CF002F96E4 /* Exo2-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6303EB329BA60CF002F96E4 /* Exo2-LightItalic.ttf */; };
+		C6303EC629BA60CF002F96E4 /* Exo2-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6303EB429BA60CF002F96E4 /* Exo2-SemiBold.ttf */; };
+		C6303EC729BA60CF002F96E4 /* Exo2-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6303EB529BA60CF002F96E4 /* Exo2-Medium.ttf */; };
+		C6303EC829BA60CF002F96E4 /* Exo2-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6303EB629BA60CF002F96E4 /* Exo2-MediumItalic.ttf */; };
+		C6303EC929BA60CF002F96E4 /* Exo2-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6303EB729BA60CF002F96E4 /* Exo2-SemiBoldItalic.ttf */; };
+		C66DC04429BA728A00EFB207 /* JWTToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66DC04329BA728A00EFB207 /* JWTToken.swift */; };
+		C66DC04629BA760200EFB207 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66DC04529BA760200EFB207 /* Date+Extension.swift */; };
 		C6B8E82129ACECDC009AAD8F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C6B8E82329ACECDC009AAD8F /* Localizable.strings */; };
 		C6C7119429ACDCBB00D58FE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C7119329ACDCBB00D58FE8 /* AppDelegate.swift */; };
 		C6C7119D29ACDCBD00D58FE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C7119C29ACDCBD00D58FE8 /* Assets.xcassets */; };
@@ -58,16 +97,56 @@
 		41CAA4F729B4FDBB00492DEB /* ViewModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelState.swift; sourceTree = "<group>"; };
 		41CAA4F929B4FE5900492DEB /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		C6254A1229B376DF00558130 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
-		C6303DFE29B39CB9002F96E4 /* Assets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Assets+Generated.swift"; sourceTree = "<group>"; };
-		C6303DFF29B39CB9002F96E4 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
-		C6303E1429BA2CF1002F96E4 /* Fonts+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Fonts+Generated.swift"; sourceTree = "<group>"; };
-		C6303E1729BA2FF7002F96E4 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		C6303E0529B502CA002F96E4 /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
 		C6303E0729B502E7002F96E4 /* LoginAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPIClient.swift; sourceTree = "<group>"; };
 		C6303E0A29B5042F002F96E4 /* LoginRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestModel.swift; sourceTree = "<group>"; };
 		C6303E0C29B50519002F96E4 /* Encodable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extension.swift"; sourceTree = "<group>"; };
 		C6303E0F29B76681002F96E4 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		C6303E1229B9F0BF002F96E4 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		C6303E1729BA2FF7002F96E4 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		C6303E2129BA4315002F96E4 /* OptionalDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalDecodable.swift; sourceTree = "<group>"; };
+		C6303E2429BA43CE002F96E4 /* StorageContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageContainer.swift; sourceTree = "<group>"; };
+		C6303E2629BA43D9002F96E4 /* StorageKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKey.swift; sourceTree = "<group>"; };
+		C6303E2929BA5318002F96E4 /* AuthorizationInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationInterceptor.swift; sourceTree = "<group>"; };
+		C6303E7F29BA60B5002F96E4 /* Inter-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.otf"; sourceTree = "<group>"; };
+		C6303E8029BA60B5002F96E4 /* Inter-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.otf"; sourceTree = "<group>"; };
+		C6303E8129BA60B5002F96E4 /* Inter-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.otf"; sourceTree = "<group>"; };
+		C6303E8229BA60B5002F96E4 /* Inter-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.otf"; sourceTree = "<group>"; };
+		C6303E8329BA60B5002F96E4 /* Inter-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ThinItalic.otf"; sourceTree = "<group>"; };
+		C6303E8429BA60B5002F96E4 /* Inter-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.otf"; sourceTree = "<group>"; };
+		C6303E8529BA60B5002F96E4 /* Inter-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.otf"; sourceTree = "<group>"; };
+		C6303E8629BA60B5002F96E4 /* Inter-ExtraBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBoldItalic.otf"; sourceTree = "<group>"; };
+		C6303E8729BA60B5002F96E4 /* Inter-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.otf"; sourceTree = "<group>"; };
+		C6303E8829BA60B5002F96E4 /* Inter-V.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-V.ttf"; sourceTree = "<group>"; };
+		C6303E8929BA60B5002F96E4 /* Inter-SemiBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBoldItalic.otf"; sourceTree = "<group>"; };
+		C6303E8A29BA60B5002F96E4 /* Inter-ExtraLightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraLightItalic.otf"; sourceTree = "<group>"; };
+		C6303E8B29BA60B5002F96E4 /* Inter-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-BoldItalic.otf"; sourceTree = "<group>"; };
+		C6303E8C29BA60B5002F96E4 /* Inter-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-LightItalic.otf"; sourceTree = "<group>"; };
+		C6303E8D29BA60B5002F96E4 /* Inter-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-BlackItalic.otf"; sourceTree = "<group>"; };
+		C6303E8E29BA60B5002F96E4 /* Inter-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Black.otf"; sourceTree = "<group>"; };
+		C6303E8F29BA60B5002F96E4 /* Inter-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Italic.otf"; sourceTree = "<group>"; };
+		C6303E9029BA60B6002F96E4 /* Inter-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-MediumItalic.otf"; sourceTree = "<group>"; };
+		C6303E9129BA60B6002F96E4 /* Inter-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraLight.otf"; sourceTree = "<group>"; };
+		C6303EA629BA60CF002F96E4 /* Exo2-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-Thin.ttf"; sourceTree = "<group>"; };
+		C6303EA729BA60CF002F96E4 /* Exo2-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-ExtraBold.ttf"; sourceTree = "<group>"; };
+		C6303EA829BA60CF002F96E4 /* Exo2-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-Italic.ttf"; sourceTree = "<group>"; };
+		C6303EA929BA60CF002F96E4 /* Exo2-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-ExtraLight.ttf"; sourceTree = "<group>"; };
+		C6303EAA29BA60CF002F96E4 /* Exo2-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-ThinItalic.ttf"; sourceTree = "<group>"; };
+		C6303EAB29BA60CF002F96E4 /* Exo2-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-BoldItalic.ttf"; sourceTree = "<group>"; };
+		C6303EAC29BA60CF002F96E4 /* Exo2-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-Regular.ttf"; sourceTree = "<group>"; };
+		C6303EAD29BA60CF002F96E4 /* Exo2-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-Bold.ttf"; sourceTree = "<group>"; };
+		C6303EAE29BA60CF002F96E4 /* Exo2-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-Light.ttf"; sourceTree = "<group>"; };
+		C6303EAF29BA60CF002F96E4 /* Exo2-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		C6303EB029BA60CF002F96E4 /* Exo2-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-BlackItalic.ttf"; sourceTree = "<group>"; };
+		C6303EB129BA60CF002F96E4 /* Exo2-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-Black.ttf"; sourceTree = "<group>"; };
+		C6303EB229BA60CF002F96E4 /* Exo2-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		C6303EB329BA60CF002F96E4 /* Exo2-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-LightItalic.ttf"; sourceTree = "<group>"; };
+		C6303EB429BA60CF002F96E4 /* Exo2-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-SemiBold.ttf"; sourceTree = "<group>"; };
+		C6303EB529BA60CF002F96E4 /* Exo2-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-Medium.ttf"; sourceTree = "<group>"; };
+		C6303EB629BA60CF002F96E4 /* Exo2-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-MediumItalic.ttf"; sourceTree = "<group>"; };
+		C6303EB729BA60CF002F96E4 /* Exo2-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		C66DC04329BA728A00EFB207 /* JWTToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTToken.swift; sourceTree = "<group>"; };
+		C66DC04529BA760200EFB207 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		C6B8E82229ACECDC009AAD8F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C6B8E82429ACED08009AAD8F /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C6B8E82529ACED4C009AAD8F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -98,9 +177,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6303E2029BA3ABB002F96E4 /* SnapKit-Dynamic in Frameworks */,
 				C6FF393729AF886A003610F5 /* XCoordinatorCombine in Frameworks */,
-				C6303E1E29BA3ABB002F96E4 /* SnapKit in Frameworks */,
+				C6303E2E29BA5750002F96E4 /* SnapKit in Frameworks */,
 				C6FF393529AF886A003610F5 /* XCoordinator in Frameworks */,
 				C6303E1B29BA39B4002F96E4 /* RNCryptor in Frameworks */,
 			);
@@ -197,9 +275,89 @@
 			path = Storage;
 			sourceTree = "<group>";
 		};
+		C6303E2329BA434B002F96E4 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				C6303E2129BA4315002F96E4 /* OptionalDecodable.swift */,
+				C6303E2429BA43CE002F96E4 /* StorageContainer.swift */,
+				C6303E2629BA43D9002F96E4 /* StorageKey.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		C6303E2B29BA55E5002F96E4 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				C6FF393A29AF8C55003610F5 /* CommonService.swift */,
+				C6FF394D29B1F54B003610F5 /* APIClient.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		C6303E5629BA5E40002F96E4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C6303EA529BA60CF002F96E4 /* Exo_2 */,
+				C6303E5829BA5E40002F96E4 /* Inter */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C6303E5829BA5E40002F96E4 /* Inter */ = {
+			isa = PBXGroup;
+			children = (
+				C6303E8E29BA60B5002F96E4 /* Inter-Black.otf */,
+				C6303E8D29BA60B5002F96E4 /* Inter-BlackItalic.otf */,
+				C6303E8429BA60B5002F96E4 /* Inter-Bold.otf */,
+				C6303E8B29BA60B5002F96E4 /* Inter-BoldItalic.otf */,
+				C6303E8729BA60B5002F96E4 /* Inter-ExtraBold.otf */,
+				C6303E8629BA60B5002F96E4 /* Inter-ExtraBoldItalic.otf */,
+				C6303E9129BA60B6002F96E4 /* Inter-ExtraLight.otf */,
+				C6303E8A29BA60B5002F96E4 /* Inter-ExtraLightItalic.otf */,
+				C6303E8F29BA60B5002F96E4 /* Inter-Italic.otf */,
+				C6303E8529BA60B5002F96E4 /* Inter-Light.otf */,
+				C6303E8C29BA60B5002F96E4 /* Inter-LightItalic.otf */,
+				C6303E8029BA60B5002F96E4 /* Inter-Medium.otf */,
+				C6303E9029BA60B6002F96E4 /* Inter-MediumItalic.otf */,
+				C6303E8229BA60B5002F96E4 /* Inter-Regular.otf */,
+				C6303E7F29BA60B5002F96E4 /* Inter-SemiBold.otf */,
+				C6303E8929BA60B5002F96E4 /* Inter-SemiBoldItalic.otf */,
+				C6303E8129BA60B5002F96E4 /* Inter-Thin.otf */,
+				C6303E8329BA60B5002F96E4 /* Inter-ThinItalic.otf */,
+				C6303E8829BA60B5002F96E4 /* Inter-V.ttf */,
+			);
+			path = Inter;
+			sourceTree = "<group>";
+		};
+		C6303EA529BA60CF002F96E4 /* Exo_2 */ = {
+			isa = PBXGroup;
+			children = (
+				C6303EA629BA60CF002F96E4 /* Exo2-Thin.ttf */,
+				C6303EA729BA60CF002F96E4 /* Exo2-ExtraBold.ttf */,
+				C6303EA829BA60CF002F96E4 /* Exo2-Italic.ttf */,
+				C6303EA929BA60CF002F96E4 /* Exo2-ExtraLight.ttf */,
+				C6303EAA29BA60CF002F96E4 /* Exo2-ThinItalic.ttf */,
+				C6303EAB29BA60CF002F96E4 /* Exo2-BoldItalic.ttf */,
+				C6303EAC29BA60CF002F96E4 /* Exo2-Regular.ttf */,
+				C6303EAD29BA60CF002F96E4 /* Exo2-Bold.ttf */,
+				C6303EAE29BA60CF002F96E4 /* Exo2-Light.ttf */,
+				C6303EAF29BA60CF002F96E4 /* Exo2-ExtraBoldItalic.ttf */,
+				C6303EB029BA60CF002F96E4 /* Exo2-BlackItalic.ttf */,
+				C6303EB129BA60CF002F96E4 /* Exo2-Black.ttf */,
+				C6303EB229BA60CF002F96E4 /* Exo2-ExtraLightItalic.ttf */,
+				C6303EB329BA60CF002F96E4 /* Exo2-LightItalic.ttf */,
+				C6303EB429BA60CF002F96E4 /* Exo2-SemiBold.ttf */,
+				C6303EB529BA60CF002F96E4 /* Exo2-Medium.ttf */,
+				C6303EB629BA60CF002F96E4 /* Exo2-MediumItalic.ttf */,
+				C6303EB729BA60CF002F96E4 /* Exo2-SemiBoldItalic.ttf */,
+			);
+			path = Exo_2;
+			sourceTree = "<group>";
+		};
 		C6B8E81E29ACEC9E009AAD8F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C6303E5629BA5E40002F96E4 /* Fonts */,
 				41CAA4EA29B4F93900492DEB /* Generated */,
 				C6C7119C29ACDCBD00D58FE8 /* Assets.xcassets */,
 				C6B8E82329ACECDC009AAD8F /* Localizable.strings */,
@@ -242,6 +400,7 @@
 		C6FF392C29AF83F4003610F5 /* Core Layers */ = {
 			isa = PBXGroup;
 			children = (
+				C6303E2B29BA55E5002F96E4 /* API */,
 				C6303E0E29B7666C002F96E4 /* Navigation */,
 				C6FF392D29AF846B003610F5 /* Module */,
 				C6FF392E29AF8473003610F5 /* Network */,
@@ -262,9 +421,8 @@
 		C6FF392E29AF8473003610F5 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				C6FF393A29AF8C55003610F5 /* CommonService.swift */,
 				C6FF394A29B11C35003610F5 /* NetworkService.swift */,
-				C6FF394D29B1F54B003610F5 /* APIClient.swift */,
+				C6303E2929BA5318002F96E4 /* AuthorizationInterceptor.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -292,6 +450,7 @@
 			children = (
 				C6FF395429B2019D003610F5 /* App */,
 				C6FF394029AF9C71003610F5 /* Network */,
+				C6303E2329BA434B002F96E4 /* Storage */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -299,6 +458,7 @@
 		C6FF394029AF9C71003610F5 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				C66DC04329BA728A00EFB207 /* JWTToken.swift */,
 				C6FF394329AFB09C003610F5 /* NetworkError.swift */,
 				C6FF394129AF9C86003610F5 /* HTTPMethod.swift */,
 			);
@@ -363,6 +523,7 @@
 			children = (
 				C6FF396C29B2377D003610F5 /* String+Extension.swift */,
 				C6303E0C29B50519002F96E4 /* Encodable+Extension.swift */,
+				C66DC04529BA760200EFB207 /* Date+Extension.swift */,
 			);
 			path = DataTypes;
 			sourceTree = "<group>";
@@ -377,7 +538,7 @@
 				C6C7118C29ACDCBB00D58FE8 /* Sources */,
 				C6C7118D29ACDCBB00D58FE8 /* Frameworks */,
 				C6C7118E29ACDCBB00D58FE8 /* Resources */,
-				C664C84529B374D600409DBD /* ShellScript */,
+				C664C84529B374D600409DBD /* SwiftGen */,
 			);
 			buildRules = (
 			);
@@ -388,8 +549,7 @@
 				C6FF393429AF886A003610F5 /* XCoordinator */,
 				C6FF393629AF886A003610F5 /* XCoordinatorCombine */,
 				C6303E1A29BA39B4002F96E4 /* RNCryptor */,
-				C6303E1D29BA3ABB002F96E4 /* SnapKit */,
-				C6303E1F29BA3ABB002F96E4 /* SnapKit-Dynamic */,
+				C6303E2D29BA5750002F96E4 /* SnapKit */,
 			);
 			productName = Blanball;
 			productReference = C6C7119029ACDCBB00D58FE8 /* Blanball.app */;
@@ -424,7 +584,7 @@
 			packageReferences = (
 				C6FF393329AF886A003610F5 /* XCRemoteSwiftPackageReference "XCoordinator" */,
 				C6303E1929BA39B4002F96E4 /* XCRemoteSwiftPackageReference "RNCryptor" */,
-				C6303E1C29BA3ABB002F96E4 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				C6303E2C29BA5750002F96E4 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = C6C7119129ACDCBB00D58FE8 /* Products */;
 			projectDirPath = "";
@@ -441,18 +601,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6C711A029ACDCBD00D58FE8 /* LaunchScreen.storyboard in Resources */,
+				C6303E9529BA60B6002F96E4 /* Inter-Regular.otf in Resources */,
+				C6303E9229BA60B6002F96E4 /* Inter-SemiBold.otf in Resources */,
+				C6303EB829BA60CF002F96E4 /* Exo2-Thin.ttf in Resources */,
+				C6303E9829BA60B6002F96E4 /* Inter-Light.otf in Resources */,
+				C6303E9629BA60B6002F96E4 /* Inter-ThinItalic.otf in Resources */,
+				C6303E9A29BA60B6002F96E4 /* Inter-ExtraBold.otf in Resources */,
+				C6303EC629BA60CF002F96E4 /* Exo2-SemiBold.ttf in Resources */,
+				C6303EA129BA60B6002F96E4 /* Inter-Black.otf in Resources */,
+				C6303E9D29BA60B6002F96E4 /* Inter-ExtraLightItalic.otf in Resources */,
+				C6303EBF29BA60CF002F96E4 /* Exo2-Bold.ttf in Resources */,
+				C6303EC429BA60CF002F96E4 /* Exo2-ExtraLightItalic.ttf in Resources */,
+				C6303EBE29BA60CF002F96E4 /* Exo2-Regular.ttf in Resources */,
+				C6303EC929BA60CF002F96E4 /* Exo2-SemiBoldItalic.ttf in Resources */,
 				C6B8E82129ACECDC009AAD8F /* Localizable.strings in Resources */,
+				C6303EA029BA60B6002F96E4 /* Inter-BlackItalic.otf in Resources */,
+				C6303EC529BA60CF002F96E4 /* Exo2-LightItalic.ttf in Resources */,
+				C6303EBB29BA60CF002F96E4 /* Exo2-ExtraLight.ttf in Resources */,
+				C6303E9729BA60B6002F96E4 /* Inter-Bold.otf in Resources */,
+				C6303EB929BA60CF002F96E4 /* Exo2-ExtraBold.ttf in Resources */,
+				C6303EA229BA60B6002F96E4 /* Inter-Italic.otf in Resources */,
+				C6303E9F29BA60B6002F96E4 /* Inter-LightItalic.otf in Resources */,
 				C6C7119D29ACDCBD00D58FE8 /* Assets.xcassets in Resources */,
+				C6303EBD29BA60CF002F96E4 /* Exo2-BoldItalic.ttf in Resources */,
+				C6303EC129BA60CF002F96E4 /* Exo2-ExtraBoldItalic.ttf in Resources */,
+				C6303EBC29BA60CF002F96E4 /* Exo2-ThinItalic.ttf in Resources */,
+				C6303E9929BA60B6002F96E4 /* Inter-ExtraBoldItalic.otf in Resources */,
 				C6FF396629B20FA7003610F5 /* InfoStage.plist in Resources */,
+				C6303EC829BA60CF002F96E4 /* Exo2-MediumItalic.ttf in Resources */,
+				C6303EA429BA60B6002F96E4 /* Inter-ExtraLight.otf in Resources */,
 				41CAA4E829B4F86C00492DEB /* LoginViewController.xib in Resources */,
+				C6303EC029BA60CF002F96E4 /* Exo2-Light.ttf in Resources */,
+				C6303EC329BA60CF002F96E4 /* Exo2-Black.ttf in Resources */,
+				C6303E9B29BA60B6002F96E4 /* Inter-V.ttf in Resources */,
+				C6303E9E29BA60B6002F96E4 /* Inter-BoldItalic.otf in Resources */,
+				C6303EA329BA60B6002F96E4 /* Inter-MediumItalic.otf in Resources */,
+				C6303EC729BA60CF002F96E4 /* Exo2-Medium.ttf in Resources */,
+				C6303EC229BA60CF002F96E4 /* Exo2-BlackItalic.ttf in Resources */,
 				C6254A1329B376E000558130 /* swiftgen.yml in Resources */,
+				C6303EBA29BA60CF002F96E4 /* Exo2-Italic.ttf in Resources */,
+				C6303E9429BA60B6002F96E4 /* Inter-Thin.otf in Resources */,
+				C6303E9329BA60B6002F96E4 /* Inter-Medium.otf in Resources */,
+				C6303E9C29BA60B6002F96E4 /* Inter-SemiBoldItalic.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		C664C84529B374D600409DBD /* ShellScript */ = {
+		C664C84529B374D600409DBD /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -461,6 +658,7 @@
 			);
 			inputPaths = (
 			);
+			name = SwiftGen;
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -480,14 +678,16 @@
 				C6303E0829B502E7002F96E4 /* LoginAPIClient.swift in Sources */,
 				C6303E1029B76681002F96E4 /* AppCoordinator.swift in Sources */,
 				C6FF394429AFB09C003610F5 /* NetworkError.swift in Sources */,
-				C6C7119829ACDCBB00D58FE8 /* ViewController.swift in Sources */,
 				C6303E1829BA2FF7002F96E4 /* StorageManager.swift in Sources */,
+				C6303E2229BA4315002F96E4 /* OptionalDecodable.swift in Sources */,
+				C66DC04429BA728A00EFB207 /* JWTToken.swift in Sources */,
 				C6FF394E29B1F54B003610F5 /* APIClient.swift in Sources */,
 				C6FF395829B20399003610F5 /* EnviromentVars.swift in Sources */,
 				41CAA4F829B4FDBB00492DEB /* ViewModelState.swift in Sources */,
 				C6FF395629B201B2003610F5 /* AppConstansts .swift in Sources */,
 				C6FF394229AF9C86003610F5 /* HTTPMethod.swift in Sources */,
 				41CAA4FA29B4FE5900492DEB /* LoginViewModel.swift in Sources */,
+				C6303E2729BA43D9002F96E4 /* StorageKey.swift in Sources */,
 				C6FF394B29B11C35003610F5 /* NetworkService.swift in Sources */,
 				C6FF393229AF85A7003610F5 /* BaseViewModel.swift in Sources */,
 				C6C7119429ACDCBB00D58FE8 /* AppDelegate.swift in Sources */,
@@ -495,12 +695,15 @@
 				41CAA4EE29B4FC0500492DEB /* Strings+Generated.swift in Sources */,
 				41CAA4F629B4FD3A00492DEB /* LoginViewModelState.swift in Sources */,
 				41CAA4E929B4F86C00492DEB /* LoginViewController.swift in Sources */,
+				C66DC04629BA760200EFB207 /* Date+Extension.swift in Sources */,
 				C6303E1329B9F0BF002F96E4 /* LoginCoordinator.swift in Sources */,
 				C6303E0D29B50519002F96E4 /* Encodable+Extension.swift in Sources */,
 				C6303E0629B502CA002F96E4 /* LoginAPI.swift in Sources */,
 				C6FF393B29AF8C55003610F5 /* CommonService.swift in Sources */,
 				C6303E0B29B5042F002F96E4 /* LoginRequestModel.swift in Sources */,
 				C6FF396D29B2377D003610F5 /* String+Extension.swift in Sources */,
+				C6303E2529BA43CE002F96E4 /* StorageContainer.swift in Sources */,
+				C6303E2A29BA5318002F96E4 /* AuthorizationInterceptor.swift in Sources */,
 				41CAA4ED29B4FC0500492DEB /* Assets+Generated.swift in Sources */,
 				C6FF393029AF84AE003610F5 /* BaseViewController.swift in Sources */,
 			);
@@ -661,7 +864,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Blanball;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -694,7 +896,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Blanball;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -789,7 +990,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Blanball;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -884,7 +1084,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Blanball;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -940,12 +1139,12 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		C6303E1C29BA3ABB002F96E4 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		C6303E2C29BA5750002F96E4 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
+				branch = develop;
+				kind = branch;
 			};
 		};
 		C6FF393329AF886A003610F5 /* XCRemoteSwiftPackageReference "XCoordinator" */ = {
@@ -964,15 +1163,10 @@
 			package = C6303E1929BA39B4002F96E4 /* XCRemoteSwiftPackageReference "RNCryptor" */;
 			productName = RNCryptor;
 		};
-		C6303E1D29BA3ABB002F96E4 /* SnapKit */ = {
+		C6303E2D29BA5750002F96E4 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C6303E1C29BA3ABB002F96E4 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = C6303E2C29BA5750002F96E4 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		C6303E1F29BA3ABB002F96E4 /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C6303E1C29BA3ABB002F96E4 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
 		};
 		C6FF393429AF886A003610F5 /* XCoordinator */ = {
 			isa = XCSwiftPackageProductDependency;

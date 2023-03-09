@@ -19,7 +19,7 @@ final class AppCoordinator: NavigationCoordinator<AppRoute> {
     // MARK: - Lifecycle -
     
     init() {
-        super.init(initialRoute: .splash)
+        super.init(initialRoute: .login)
         self.rootViewController.setNavigationBarHidden(true, animated: false)
         self.rootViewController.view.backgroundColor = .clear
     }
@@ -29,6 +29,8 @@ final class AppCoordinator: NavigationCoordinator<AppRoute> {
         case .splash:
             return .none()
         case .login:
+            let loginCoordinator = LoginCoordinator(rootViewController: self.rootViewController)
+            addChild(loginCoordinator)
             return .none()
         case .home:
             return .none()

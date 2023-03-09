@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appCoordinator = AppCoordinator()
         appCoordinator.setRoot(for: window)
         
+        //window.makeKeyAndVisible()
         return true
     }
 }

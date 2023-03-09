@@ -5,7 +5,7 @@
 //  Created by Misha Deneka on 09.03.2023.
 //
 
-import Foundation
+import UIKit
 import XCoordinator
 
 enum LoginRoute: Route {
@@ -18,8 +18,8 @@ final class LoginCoordinator: NavigationCoordinator<LoginRoute> {
     
     // MARK: - Lifecycle -
     
-    init() {
-        super.init(initialRoute: .login)
+    init(rootViewController: UINavigationController) {
+        super.init(rootViewController: rootViewController, initialRoute: .login)
         self.rootViewController.setNavigationBarHidden(true, animated: false)
         self.rootViewController.view.backgroundColor = .clear
     }
