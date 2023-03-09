@@ -12,6 +12,8 @@
 		4146422829B6127C00E4F0BF /* UIView+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4146422729B6127C00E4F0BF /* UIView+CornerRadius.swift */; };
 		4146422B29B652F400E4F0BF /* BlanRoundedTextFieldState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4146422A29B652F400E4F0BF /* BlanRoundedTextFieldState.swift */; };
 		41AE26A629B67B9D0072575B /* AppConstants+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AE26A529B67B9D0072575B /* AppConstants+Regex.swift */; };
+		41AE26AA29B887890072575B /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AE26A829B887880072575B /* LoadingViewController.swift */; };
+		41AE26AB29B887890072575B /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41AE26A929B887890072575B /* LoadingViewController.xib */; };
 		41CAA4E829B4F86C00492DEB /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41CAA4E629B4F86C00492DEB /* LoginViewController.xib */; };
 		41CAA4E929B4F86C00492DEB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CAA4E729B4F86C00492DEB /* LoginViewController.swift */; };
 		41CAA4ED29B4FC0500492DEB /* Assets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CAA4EB29B4FC0400492DEB /* Assets+Generated.swift */; };
@@ -53,6 +55,8 @@
 		4146422729B6127C00E4F0BF /* UIView+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CornerRadius.swift"; sourceTree = "<group>"; };
 		4146422A29B652F400E4F0BF /* BlanRoundedTextFieldState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlanRoundedTextFieldState.swift; sourceTree = "<group>"; };
 		41AE26A529B67B9D0072575B /* AppConstants+Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppConstants+Regex.swift"; sourceTree = "<group>"; };
+		41AE26A829B887880072575B /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		41AE26A929B887890072575B /* LoadingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingViewController.xib; sourceTree = "<group>"; };
 		41CAA4E629B4F86C00492DEB /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		41CAA4E729B4F86C00492DEB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		41CAA4EB29B4FC0400492DEB /* Assets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Assets+Generated.swift"; sourceTree = "<group>"; };
@@ -131,9 +135,19 @@
 			path = BlanRoundedTextField;
 			sourceTree = "<group>";
 		};
+		41AE26A729B8838D0072575B /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				41AE26A829B887880072575B /* LoadingViewController.swift */,
+				41AE26A929B887890072575B /* LoadingViewController.xib */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
 		41CAA4E429B4F86C00492DEB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				41AE26A729B8838D0072575B /* Loading */,
 				41CAA4E529B4F86C00492DEB /* Login */,
 			);
 			path = Modules;
@@ -434,6 +448,7 @@
 				C6FF396629B20FA7003610F5 /* InfoStage.plist in Resources */,
 				41CAA4E829B4F86C00492DEB /* LoginViewController.xib in Resources */,
 				C6254A1329B376E000558130 /* swiftgen.yml in Resources */,
+				41AE26AB29B887890072575B /* LoadingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +496,7 @@
 				C6C7119429ACDCBB00D58FE8 /* AppDelegate.swift in Sources */,
 				C6FF395329B2009D003610F5 /* CommonService+Default.swift in Sources */,
 				41CAA4EE29B4FC0500492DEB /* Strings+Generated.swift in Sources */,
+				41AE26AA29B887890072575B /* LoadingViewController.swift in Sources */,
 				4146422529B6118800E4F0BF /* EdgeInsetsTextField.swift in Sources */,
 				41CAA4F629B4FD3A00492DEB /* LoginViewModelState.swift in Sources */,
 				41CAA4E929B4F86C00492DEB /* LoginViewController.swift in Sources */,

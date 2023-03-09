@@ -10,13 +10,13 @@ import Combine
 
 class LoginViewController: BaseViewController<LoginViewModel> {
     
-    @IBOutlet weak var logoImageView: UIImageView!
-    @IBOutlet weak var subtitleLabel: UILabel!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var loginTextField: BlanRoundedTextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var checkBoxButton: UIButton!
-    @IBOutlet weak var agreementLabel: UILabel!
+    @IBOutlet private weak var logoImageView: UIImageView!
+    @IBOutlet private weak var subtitleLabel: UILabel!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var loginTextField: BlanRoundedTextField!
+    @IBOutlet private weak var passwordTextField: BlanRoundedTextField!
+    @IBOutlet private weak var checkBoxButton: UIButton!
+    @IBOutlet private weak var agreementLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
