@@ -11,7 +11,7 @@ import Combine
 
 final class LoginViewModel: BaseViewModel<LoginViewModelState> {
     
-    private let router: UnownedRouter<LoginRoute>
+    private let router: UnownedRouter<LoginRoute>!
     private let apiClient: LoginAPIClient
     
     init(
@@ -25,13 +25,6 @@ final class LoginViewModel: BaseViewModel<LoginViewModelState> {
     
     override func start() {
         updateState(newValue: .loading)
-        router.trigger(.resetPassword)
-    }
-    
-    func bindViewState(publisher: Published<BlanRoundedTextFieldState>.Publisher) {
-        publisher.sink { state in
-            
-        }.store(in: &cancellables)
     }
     
     private func fetchLogin() async {

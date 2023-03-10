@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import XCoordinator
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,8 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appCoordinator.setRoot(for: window)
 //        self.window?.rootViewController = LoadingViewController(nibName: "LoadingViewController", bundle: nil)
 //        self.window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainViewController")
-        let viewModel = LoginViewModel(apiClient: LoginAPIClientImpl())
-        self.window?.rootViewController = LoginViewController(viewModel: viewModel)
+//        let viewModel = LoginViewModel(apiClient: LoginAPIClientImpl())
+//        self.window?.rootViewController = LoginViewController(viewModel: viewModel)
         
         //window.makeKeyAndVisible()
         return true

@@ -9,8 +9,8 @@ import Foundation
 
 extension AppConstants {
     enum Regex {
-        static let email = "1"
-        static let password = "2"
-        static let phoneNumber = "3"
+        static let email = #"^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"#
+        static let password = #"^[A-Z0-9a-z]{6,30}"#
+        static let phoneNumber = #"^\+?[0-9]{1,3}[0-9]{3}[0-9]{3}[0-9]{4}$"#
     }
 }

@@ -9,6 +9,8 @@ import UIKit
 
 class CommonButton: UIButton {
     
+    //TODO: Implement another solution or enhance current
+    
     // MARK: - Private properties -
     
     override var isEnabled: Bool {
@@ -36,7 +38,7 @@ class CommonButton: UIButton {
     private var switchedTintColor: (UIColor?, UIColor?) = (nil, nil) {
         didSet {
             setTitleColor(switchedTintColor.0, for: .normal)
-            setTitleColor(switchedTintColor.1, for: .disabled)
+            setTitleColor(switchedTintColor.1 ?? switchedTintColor.0, for: .disabled)
         }
     }
     
@@ -54,8 +56,11 @@ class CommonButton: UIButton {
     
     // MARK: - Internal properties -
     
+    // TODO: MAKE INSETS
+    
     func configure(
         title: String? = nil,
+        titleFont: UIFont? = nil,
         tintEnabled: UIColor? = nil,
         tintDisabled: UIColor? = nil,
         imageEnabled: UIImage? = nil,
@@ -68,7 +73,8 @@ class CommonButton: UIButton {
         switchedTintColor = (tintEnabled, tintDisabled)
         switchedBackgroundColor = (backgroundEnabled, backgroundDisabled)
         disabledBorderColor = borderDisabled
-        isEnabled = false
+        setImage(imageEnabled, for: .normal)
+        tintColor = tintEnabled
     }
     
     private func configureUI() {

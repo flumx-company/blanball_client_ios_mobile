@@ -26,7 +26,7 @@ class BlanRoundedTextField: UIView {
     
     private lazy var errorLabelHeightConstraint: NSLayoutConstraint = {
         errorLabel.heightAnchor.constraint(
-            equalToConstant: 15
+            equalToConstant: .zero
         )
     }()
     
@@ -63,7 +63,7 @@ class BlanRoundedTextField: UIView {
         tf.backgroundColor = .clear
         tf.borderStyle = .none
         tf.layer.borderWidth = Constants.borderWidth
-        tf.layer.borderColor = Assets.Colors.Border.Placeholder.default.color.cgColor
+        tf.layer.borderColor = Constants.borderColor.cgColor
         tf.apply(cornerRadius: Constants.cornerRadius)
         tf.delegate = self
         tf.isSecureTextEntry = false
@@ -75,16 +75,26 @@ class BlanRoundedTextField: UIView {
         button.imageEdgeInsets = Constants.secureButtonInsets
         button.tintColor = Assets.Colors.Text.sublet.color
         button.frame = CGRect(
-            x: editingTextField.frame.size.width - 18,
+            x: editingTextField.frame.size.width - Constants.secureButtonCommonInset,
             y: .zero,
-            width: 18,
-            height: 18
+            width: Constants.secureButtonCommonInset,
+            height: Constants.secureButtonCommonInset
         )
-        button.addTarget(self, action: #selector(secureButtonDidTap), for: .touchUpInside)
+        button.addTarget(
+            self,
+            action: #selector(secureButtonTapped),
+            for: .touchUpInside
+        )
         editingTextField.rightView = button
         editingTextField.rightViewMode = .always
-        button.setImage(UIImage(named: "eye-off"), for: .normal)
-        button.setImage(UIImage(named: "eye"), for: .selected)
+        button.setImage(
+            Assets.Images.eyeOff.image,
+            for: .normal
+        )
+        button.setImage(
+            Assets.Images.eye.image,
+            for: .selected
+        )
         return button
     }()
     
@@ -93,14 +103,14 @@ class BlanRoundedTextField: UIView {
     override init(frame: CGRect) {
         state = .updated(value: nil, isValid: true)
         super.init(frame: frame)
-        setupUI()
+        configureUI()
         setupConstraints()
     }
     
     required init?(coder: NSCoder) {
         state = .updated(value: nil, isValid: true)
         super.init(coder: coder)
-        setupUI()
+        configureUI()
         setupConstraints()
     }
     
@@ -110,17 +120,25 @@ class BlanRoundedTextField: UIView {
     
     func configure(
         title: String? = nil,
-        with titleFont: UIFont? = nil,
+        titleFont: UIFont? = nil,
         text: String? = nil,
-        with textFont: UIFont? = nil,
+        textFont: UIFont? = nil,
         placeholder: String? = nil,
-        with placeholderFont: UIFont? = nil,
+        placeholderFont: UIFont? = nil,
         isSecure: Bool = false,
         pattern: String? = nil
     ) {
         titleLabel.text = title
+        titleLabel.font = titleFont
         editingTextField.text = text
-        editingTextField.placeholder = placeholder
+        editingTextField.attributedPlaceholder = NSAttributedString(
+            string: placeholder ?? "",
+            attributes: [.font: placeholderFont as Any]
+        )
+        editingTextField.attributedText = NSAttributedString(
+            string: text ?? "",
+            attributes: [.font: textFont as Any]
+        )
         setSecureEntryMode(isSecure)
     }
     
@@ -146,13 +164,22 @@ class BlanRoundedTextField: UIView {
         editingTextField.insets = isSecure ? Constants.secureTextInsets : Constants.defaultTextInsets
     }
     
-    private func setupUI() {
+    private func configureUI() {
         backgroundColor = Assets.Colors.Bg.primary.color
     }
     
     private func setupViewState(isValid: Bool) {
-        errorLabel.isHidden = true
-//        errorLabelHeightConstraint.constant = isValid ? .zero : 20
+        errorLabel.isHidden = isValid
+        editingTextField.layer.borderColor = isValid
+        ? Constants.borderColor.cgColor
+        : Constants.errorColor.cgColor
+        titleLabel.textColor = isValid
+        ? Constants.titleColor
+        : Constants.errorColor
+        self.errorLabelHeightConstraint.constant = isValid ? .zero : 20
+        UIView.animate(withDuration: 0.1, delay: .zero, options: .curveEaseInOut) {
+            self.view.layoutIfNeeded()
+        }
     }
     
     // TODO: Modify regex characters
@@ -160,7 +187,6 @@ class BlanRoundedTextField: UIView {
     private func isValid(string: String, literalRegex: String) -> Bool {
         let test = NSPredicate(format: "SELF MATCHES %@", literalRegex)
         return test.evaluate(with: string)
-//        #"^[А-ЩЬЮЯҐЄІЇа-щьюяґєії \x{2019} ' –-]{1,}$"#
     }
     
     private func setupConstraints() {
@@ -169,17 +195,16 @@ class BlanRoundedTextField: UIView {
         addSubview(errorLabel)
         labelContainerView.addSubview(titleLabel)
         NSLayoutConstraint.activate([
-            editingTextField.leftAnchor.constraint(
-                equalTo: self.leftAnchor
+            editingTextField.leadingAnchor.constraint(
+                equalTo: self.leadingAnchor
             ),
-            editingTextField.rightAnchor.constraint(
-                equalTo: self.rightAnchor
+            editingTextField.trailingAnchor.constraint(
+                equalTo: self.trailingAnchor
             ),
             editingTextField.topAnchor.constraint(
                 equalTo: self.topAnchor,
                 constant: Constants.textFieldTopInset
             ),
-            // TODO: Add `Error` case handling
             
             errorLabel.leadingAnchor.constraint(
                 equalTo: self.leadingAnchor
@@ -195,16 +220,17 @@ class BlanRoundedTextField: UIView {
             ),
             errorLabelHeightConstraint,
             
-            labelContainerView.leftAnchor.constraint(
-                equalTo: editingTextField.leftAnchor,
+            labelContainerView.leadingAnchor.constraint(
+                equalTo: editingTextField.leadingAnchor,
                 constant: Constants.containerHorizontalSpacing
             ),
-            labelContainerView.rightAnchor.constraint(
-                lessThanOrEqualTo: editingTextField.rightAnchor,
+            labelContainerView.trailingAnchor.constraint(
+                lessThanOrEqualTo: editingTextField.trailingAnchor,
                 constant: -Constants.containerHorizontalSpacing
             ),
-            labelContainerView.rightAnchor.constraint(
-                equalTo: titleLabel.rightAnchor, constant: 4
+            labelContainerView.trailingAnchor.constraint(
+                equalTo: titleLabel.trailingAnchor,
+                constant: 4
             ),
             labelContainerView.centerYAnchor.constraint(
                 equalTo: editingTextField.topAnchor
@@ -213,12 +239,12 @@ class BlanRoundedTextField: UIView {
                 equalTo: titleLabel.heightAnchor
             ),
             
-            titleLabel.leftAnchor.constraint(
-                equalTo: labelContainerView.leftAnchor,
+            titleLabel.leadingAnchor.constraint(
+                equalTo: labelContainerView.leadingAnchor,
                 constant: Constants.titleHorizontalPadding
             ),
-            titleLabel.rightAnchor.constraint(
-                lessThanOrEqualTo: labelContainerView.rightAnchor,
+            titleLabel.trailingAnchor.constraint(
+                lessThanOrEqualTo: labelContainerView.trailingAnchor,
                 constant: -Constants.titleHorizontalPadding
             ),
             titleLabel.topAnchor.constraint(
@@ -232,7 +258,7 @@ class BlanRoundedTextField: UIView {
     
     // MARK: - Actions -
     
-    @objc private func secureButtonDidTap()  {
+    @objc private func secureButtonTapped()  {
         secureFieldButton.isSelected.toggle()
         editingTextField.isSecureTextEntry.toggle()
     }
@@ -248,34 +274,5 @@ extension BlanRoundedTextField: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
-    }
-}
-
-extension BlanRoundedTextField {
-    enum Constants {
-        static let textFieldTopInset: CGFloat = 8
-        static let borderWidth: CGFloat = 1
-        static let cornerRadius: CGFloat = 6
-        static let titleHorizontalPadding: CGFloat = 4
-        static let titleHeight: CGFloat = 16
-        static let containerHorizontalSpacing: CGFloat = 12
-        static let defaultTextInsets = UIEdgeInsets(
-            top: 8,
-            left: 12,
-            bottom: 8,
-            right: 8
-        )
-        static let secureTextInsets = UIEdgeInsets(
-            top: 8,
-            left: 12,
-            bottom: 8,
-            right: 38
-        )
-        static let secureButtonInsets = UIEdgeInsets(
-            top: 0,
-            left: -18,
-            bottom: 0,
-            right: 0
-        )
     }
 }
