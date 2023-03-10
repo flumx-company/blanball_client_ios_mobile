@@ -7,10 +7,11 @@
 
 import Foundation
 import XCoordinator
+import Combine
 
 final class LoginViewModel: BaseViewModel<LoginViewModelState> {
     
-    private let router: UnownedRouter<LoginRoute>
+    private let router: UnownedRouter<LoginRoute>!
     private let apiClient: LoginAPIClient
     
     init(
@@ -24,7 +25,6 @@ final class LoginViewModel: BaseViewModel<LoginViewModelState> {
     
     override func start() {
         updateState(newValue: .loading)
-        router.trigger(.resetPassword)
     }
     
     private func fetchLogin() async {
