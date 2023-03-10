@@ -74,6 +74,18 @@ class CommonButton: UIButton {
         switchedBackgroundColor = (backgroundEnabled, backgroundDisabled)
         disabledBorderColor = borderDisabled
         setImage(imageEnabled, for: .normal)
+        titleEdgeInsets = UIEdgeInsets(
+            top: 1,
+            left: -60,
+            bottom: 1,
+            right: 1
+        )
+        imageEdgeInsets = UIEdgeInsets(
+            top: 1,
+            left: 1,
+            bottom: 1,
+            right: -60
+        )
         tintColor = tintEnabled
     }
     
