@@ -66,6 +66,7 @@
 		C6303EC929BA60CF002F96E4 /* Exo2-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6303EB729BA60CF002F96E4 /* Exo2-SemiBoldItalic.ttf */; };
 		C66DC04429BA728A00EFB207 /* JWTToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66DC04329BA728A00EFB207 /* JWTToken.swift */; };
 		C66DC04629BA760200EFB207 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66DC04529BA760200EFB207 /* Date+Extension.swift */; };
+		C6A375B529BB5805009E52F7 /* BaseCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A375B429BB5805009E52F7 /* BaseCodeView.swift */; };
 		C6B8E82129ACECDC009AAD8F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C6B8E82329ACECDC009AAD8F /* Localizable.strings */; };
 		C6C7119429ACDCBB00D58FE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C7119329ACDCBB00D58FE8 /* AppDelegate.swift */; };
 		C6C7119D29ACDCBD00D58FE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C7119C29ACDCBD00D58FE8 /* Assets.xcassets */; };
@@ -149,6 +150,7 @@
 		C6303EB729BA60CF002F96E4 /* Exo2-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		C66DC04329BA728A00EFB207 /* JWTToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTToken.swift; sourceTree = "<group>"; };
 		C66DC04529BA760200EFB207 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		C6A375B429BB5805009E52F7 /* BaseCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCodeView.swift; sourceTree = "<group>"; };
 		C6B8E82229ACECDC009AAD8F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C6B8E82429ACED08009AAD8F /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C6B8E82529ACED4C009AAD8F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -366,6 +368,14 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
+		C6A375B329BB57F2009E52F7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C6A375B429BB5805009E52F7 /* BaseCodeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		C6B8E81E29ACEC9E009AAD8F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -463,6 +473,7 @@
 			children = (
 				C6FF395429B2019D003610F5 /* App */,
 				C6FF394029AF9C71003610F5 /* Network */,
+				C6A375B329BB57F2009E52F7 /* Views */,
 				C6303E2329BA434B002F96E4 /* Storage */,
 			);
 			path = Entities;
@@ -717,6 +728,7 @@
 				C6FF396D29B2377D003610F5 /* String+Extension.swift in Sources */,
 				C6303E2529BA43CE002F96E4 /* StorageContainer.swift in Sources */,
 				C6303E2A29BA5318002F96E4 /* AuthorizationInterceptor.swift in Sources */,
+				C6A375B529BB5805009E52F7 /* BaseCodeView.swift in Sources */,
 				C6FF393029AF84AE003610F5 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
