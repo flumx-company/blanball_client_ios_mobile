@@ -1,5 +1,5 @@
 //
-//  LabeledCheckBoxState.swift
+//  CheckBoxState.swift
 //  Blanball
 //
 //  Created by Nik Dub on 10.03.2023.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum LabeledCheckBoxState {
+enum CheckBoxState {
     case selected
     case deselected
     case disabled

@@ -1,5 +1,5 @@
 //
-//  BlanRoundedTextField.swift
+//  TitledTextField.swift
 //  Blanball
 //
 //  Created by Nik Dub on 06.03.2023.
@@ -8,11 +8,11 @@
 import UIKit
 import Combine
 
-class BlanRoundedTextField: UIView {
+class TitledTextField: UIView {
     
     // MARK: - Internal properties -
     
-    @Published private(set) var state: BlanRoundedTextFieldState
+    @Published private(set) var state: TitledTextFieldState
     
     var pattern: String?
     
@@ -116,8 +116,6 @@ class BlanRoundedTextField: UIView {
     
     // MARK: - Internal properties -
     
-    // TODO: Make single configure function
-    
     func configure(
         title: String? = nil,
         titleFont: UIFont? = nil,
@@ -181,8 +179,6 @@ class BlanRoundedTextField: UIView {
             self.view.layoutIfNeeded()
         }
     }
-    
-    // TODO: Modify regex characters
     
     private func isValid(string: String, literalRegex: String) -> Bool {
         let test = NSPredicate(format: "SELF MATCHES %@", literalRegex)
@@ -266,7 +262,7 @@ class BlanRoundedTextField: UIView {
 
 // MARK: - Extension -
 
-extension BlanRoundedTextField: UITextFieldDelegate {
+extension TitledTextField: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         if isValid(string: textField.text ?? "", literalRegex: pattern ?? "") {
             setupViewState(isValid: true)

@@ -13,12 +13,14 @@
             <connections>
                 <outlet property="alternativeLabel" destination="QKg-Lm-ofb" id="RgJ-l0-fuV"/>
                 <outlet property="appleSignInButton" destination="BaU-w7-BDp" id="fzq-4e-DE2"/>
-                <outlet property="checkBoxButton" destination="UBo-83-VyT" id="mxK-ch-9fK"/>
+                <outlet property="checkBoxButton" destination="tas-m4-3ew" id="4uj-7x-aDD"/>
                 <outlet property="forgotPasswordButton" destination="axs-d7-ZQ5" id="DRy-96-JXf"/>
                 <outlet property="loginButton" destination="pXW-bD-ZlF" id="zo0-pR-BRK"/>
                 <outlet property="loginTextField" destination="X9R-ER-gqw" id="mWX-cl-6qx"/>
                 <outlet property="logoImageView" destination="ka4-GO-sfV" id="kRj-tV-cTr"/>
                 <outlet property="passwordTextField" destination="zpR-W3-W2e" id="54K-TH-Sw7"/>
+                <outlet property="saveUserContainerView" destination="UBo-83-VyT" id="KVq-Yh-fem"/>
+                <outlet property="saveUserLabel" destination="AEz-Im-en0" id="5Zb-Wk-WzZ"/>
                 <outlet property="signUpButton" destination="cBV-5H-4zo" id="TwV-e7-BVu"/>
                 <outlet property="signUpLabel" destination="pj0-bh-16Q" id="s8c-5b-487"/>
                 <outlet property="subtitleLabel" destination="haF-cA-T2y" id="3WX-7z-ZHf"/>
@@ -53,7 +55,7 @@
                                         <constraint firstAttribute="trailing" secondItem="ka4-GO-sfV" secondAttribute="trailing" id="rPS-NZ-dIR"/>
                                     </constraints>
                                 </view>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pht-Vp-ffP" customClass="CommonLabel" customModule="Blanball" customModuleProvider="target">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pht-Vp-ffP">
                                     <rect key="frame" x="0.0" y="126" width="345" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="f0g-EP-osO"/>
@@ -62,7 +64,7 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haF-cA-T2y" customClass="CommonLabel" customModule="Blanball" customModuleProvider="target">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haF-cA-T2y">
                                     <rect key="frame" x="0.0" y="174" width="345" height="28.666666666666657"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                     <nil key="textColor"/>
@@ -79,20 +81,45 @@
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="2OZ-3p-lBC">
                             <rect key="frame" x="24" y="250.66666666666669" width="345" height="140"/>
                             <subviews>
-                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="345" placeholderIntrinsicHeight="48" translatesAutoresizingMaskIntoConstraints="NO" id="X9R-ER-gqw" customClass="BlanRoundedTextField" customModule="Blanball" customModuleProvider="target">
+                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="345" placeholderIntrinsicHeight="48" translatesAutoresizingMaskIntoConstraints="NO" id="X9R-ER-gqw" customClass="TitledTextField" customModule="Blanball" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="345" height="48"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 </view>
-                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="345" placeholderIntrinsicHeight="48" translatesAutoresizingMaskIntoConstraints="NO" id="zpR-W3-W2e" customClass="BlanRoundedTextField" customModule="Blanball" customModuleProvider="target">
+                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="345" placeholderIntrinsicHeight="48" translatesAutoresizingMaskIntoConstraints="NO" id="zpR-W3-W2e" customClass="TitledTextField" customModule="Blanball" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="60" width="345" height="48"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i3L-7p-CDH">
                                     <rect key="frame" x="0.0" y="120" width="345" height="20"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UBo-83-VyT" customClass="LabeledCheckBox" customModule="Blanball" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UBo-83-VyT">
                                             <rect key="frame" x="0.0" y="0.0" width="203" height="20"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tas-m4-3ew" customClass="CheckBox" customModule="Blanball" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="H7v-ho-YJo"/>
+                                                        <constraint firstAttribute="width" constant="20" id="LWb-RL-wrC"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEz-Im-en0">
+                                                    <rect key="frame" x="27" y="0.0" width="176" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstItem="AEz-Im-en0" firstAttribute="top" secondItem="UBo-83-VyT" secondAttribute="top" id="1IT-It-jCK"/>
+                                                <constraint firstAttribute="bottom" secondItem="tas-m4-3ew" secondAttribute="bottom" id="8f5-2l-64L"/>
+                                                <constraint firstAttribute="bottom" secondItem="AEz-Im-en0" secondAttribute="bottom" id="9IX-Vj-pRs"/>
+                                                <constraint firstItem="tas-m4-3ew" firstAttribute="top" secondItem="UBo-83-VyT" secondAttribute="top" id="Bp6-DO-8VU"/>
+                                                <constraint firstItem="AEz-Im-en0" firstAttribute="leading" secondItem="tas-m4-3ew" secondAttribute="trailing" constant="7" id="Ltk-p0-Rf7"/>
+                                                <constraint firstAttribute="trailing" secondItem="AEz-Im-en0" secondAttribute="trailing" id="SAo-52-hxo"/>
+                                                <constraint firstItem="tas-m4-3ew" firstAttribute="leading" secondItem="UBo-83-VyT" secondAttribute="leading" id="THk-LN-Z4k"/>
+                                            </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="axs-d7-ZQ5" customClass="UnderlinedDashButton" customModule="Blanball" customModuleProvider="target">
                                             <rect key="frame" x="210" y="0.0" width="135" height="20"/>
@@ -132,7 +159,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BeC-7e-VEi">
                                     <rect key="frame" x="0.0" y="51.999999999999943" width="345" height="20"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pj0-bh-16Q" customClass="CommonLabel" customModule="Blanball" customModuleProvider="target">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pj0-bh-16Q">
                                             <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="20"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -170,7 +197,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mki-AV-R7f">
                                     <rect key="frame" x="0.0" y="0.0" width="345" height="50"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKg-Lm-ofb" customClass="CommonLabel" customModule="Blanball" customModuleProvider="target">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKg-Lm-ofb">
                                             <rect key="frame" x="152" y="0.0" width="41.333333333333343" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="aL9-Rs-xRJ"/>

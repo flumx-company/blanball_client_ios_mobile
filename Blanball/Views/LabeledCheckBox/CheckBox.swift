@@ -1,5 +1,5 @@
 //
-//  LabeledCheckBox.swift
+//  CheckBox.swift
 //  Blanball
 //
 //  Created by Nik Dub on 10.03.2023.
@@ -7,20 +7,17 @@
 
 import UIKit
 
-class LabeledCheckBox: UIView {
+class CheckBox: UIView {
     
     // MARK: - Internal properties -
     
-    @Published private(set) var state: LabeledCheckBoxState
+    @Published private(set) var state: CheckBoxState {
+        didSet {
+            apply(state: state)
+        }
+    }
     
     // MARK: - Private properties -
-    
-    private lazy var headlineLabel: UILabel = {
-        let label = UILabel(frame: .zero)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textAlignment = .left
-        return label
-    }()
     
     private lazy var checkBox: UIButton = {
         let button = UIButton(frame: .zero)
@@ -56,16 +53,15 @@ class LabeledCheckBox: UIView {
         configureUI()
     }
     
-    // MARK: - Internal properties -
+    // MARK: - Internal methods -
     
-    func configure(
-        title: String? = nil,
-        with titleColor: UIColor? = nil,
-        font: UIFont? = nil
-    ) {
-        headlineLabel.text = title
-        headlineLabel.textColor = titleColor
-        headlineLabel.font = font
+    func setInitState(_ value: CheckBoxState) {
+        state = value
+    }
+    
+    func toggleState() {
+        guard state != .disabled else { return }
+        state = state == .selected ? .deselected : .selected
     }
     
     // MARK: - Private methods -
@@ -76,30 +72,29 @@ class LabeledCheckBox: UIView {
     
     private func setupConstraints() {
         addSubview(checkBox)
-        addSubview(headlineLabel)
         NSLayoutConstraint.activate([
             checkBox.heightAnchor.constraint(
-                equalToConstant: 20
+                equalTo: heightAnchor
             ),
             checkBox.widthAnchor.constraint(
                 equalTo: checkBox.heightAnchor
             ),
-            checkBox.leadingAnchor.constraint(
-                equalTo: self.leadingAnchor
-            ),
             checkBox.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            headlineLabel.leadingAnchor.constraint(
-                equalTo: checkBox.trailingAnchor,
-                constant: 7
-            ),
-            headlineLabel.trailingAnchor.constraint(
-                equalTo: self.trailingAnchor,
-                constant: 7
-            ),
-            headlineLabel.centerYAnchor.constraint(
-                equalTo: checkBox.centerYAnchor
-            )
+            checkBox.centerXAnchor.constraint(equalTo: self.centerXAnchor),
         ])
+    }
+    
+    private func apply(state: CheckBoxState) {
+        switch state {
+        case .selected:
+            checkBox.isEnabled = true
+            checkBox.isSelected = true
+        case .deselected:
+            checkBox.isEnabled = true
+            checkBox.isSelected = false
+        case .disabled:
+            checkBox.isEnabled = false
+        }
     }
     
     // MARK: - Actions -

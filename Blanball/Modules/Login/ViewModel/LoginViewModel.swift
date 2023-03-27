@@ -13,7 +13,7 @@ final class LoginViewModel: BaseViewModel<LoginViewModelState> {
     
     // MARK: - Private properties -
     
-    private let router: UnownedRouter<LoginRoute>!
+    private let router: StrongRouter<LoginRoute>!
     private let apiClient: LoginAPIClient
     
     private var login = ""
@@ -22,7 +22,7 @@ final class LoginViewModel: BaseViewModel<LoginViewModelState> {
     // MARK: - Init -
     
     init(
-        router: UnownedRouter<LoginRoute>,
+        router: StrongRouter<LoginRoute>,
         apiClient: LoginAPIClient
     ) {
         self.apiClient = apiClient
@@ -37,7 +37,7 @@ final class LoginViewModel: BaseViewModel<LoginViewModelState> {
     }
     
     func subscribeToLoginTextFieldPublisher(
-        _ publisher: AnyPublisher<BlanRoundedTextFieldState, Never>
+        _ publisher: AnyPublisher<TitledTextFieldState, Never>
     ) {
         publisher
             .sink { state in
@@ -51,7 +51,7 @@ final class LoginViewModel: BaseViewModel<LoginViewModelState> {
     }
     
     func subscribeToPasswordTextFieldPublisher(
-        _ publisher: AnyPublisher<BlanRoundedTextFieldState, Never>
+        _ publisher: AnyPublisher<TitledTextFieldState, Never>
     ) {
         publisher
             .sink { state in

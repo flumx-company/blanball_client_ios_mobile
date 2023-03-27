@@ -1,5 +1,5 @@
 //
-//  BlanRoundedTextField+Constants.swift
+//  TitledTextField+Constants.swift
 //  Blanball
 //
 //  Created by Nik Dub on 10.03.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension BlanRoundedTextField {
+extension TitledTextField {
     enum Constants {
         static let textFieldTopInset: CGFloat = 8
         static let borderWidth: CGFloat = 1

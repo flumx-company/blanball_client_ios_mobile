@@ -11,13 +11,13 @@
 		4109987D29BA70DE00954329 /* Assets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6303DFE29B39CB9002F96E4 /* Assets+Generated.swift */; };
 		4109988129BA79F700954329 /* CommonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4109988029BA79F700954329 /* CommonButton.swift */; };
 		4109988429BA91A700954329 /* CommonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4109988329BA91A700954329 /* CommonLabel.swift */; };
-		4109988829BA963000954329 /* LabeledCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4109988729BA963000954329 /* LabeledCheckBox.swift */; };
-		4109988A29BAA2C800954329 /* BlanRoundedTextField+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4109988929BAA2C800954329 /* BlanRoundedTextField+Constants.swift */; };
-		4109988C29BAA45C00954329 /* LabeledCheckBoxState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4109988B29BAA45C00954329 /* LabeledCheckBoxState.swift */; };
+		4109988829BA963000954329 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4109988729BA963000954329 /* CheckBox.swift */; };
+		4109988A29BAA2C800954329 /* TitledTextField+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4109988929BAA2C800954329 /* TitledTextField+Constants.swift */; };
+		4109988C29BAA45C00954329 /* CheckBoxState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4109988B29BAA45C00954329 /* CheckBoxState.swift */; };
 		4109988F29BAB13200954329 /* UnderlinedDashButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4109988E29BAB13200954329 /* UnderlinedDashButton.swift */; };
 		4109989129BB599B00954329 /* UnderlinedDashButtonState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4109989029BB599B00954329 /* UnderlinedDashButtonState.swift */; };
 		4109989329BB5CBC00954329 /* CommonButtonState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4109989229BB5CBC00954329 /* CommonButtonState.swift */; };
-		4146422329B6003E00E4F0BF /* BlanRoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4146422229B6003E00E4F0BF /* BlanRoundedTextField.swift */; };
+		4146422329B6003E00E4F0BF /* TitledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4146422229B6003E00E4F0BF /* TitledTextField.swift */; };
 		4146422529B6118800E4F0BF /* EdgeInsetsTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4146422429B6118800E4F0BF /* EdgeInsetsTextField.swift */; };
 		4146422829B6127C00E4F0BF /* UIView+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4146422729B6127C00E4F0BF /* UIView+CornerRadius.swift */; };
 		4146422B29B652F400E4F0BF /* BlanRoundedTextFieldState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4146422A29B652F400E4F0BF /* BlanRoundedTextFieldState.swift */; };
@@ -112,13 +112,13 @@
 		4109987A29BA703200954329 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		4109988029BA79F700954329 /* CommonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButton.swift; sourceTree = "<group>"; };
 		4109988329BA91A700954329 /* CommonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonLabel.swift; sourceTree = "<group>"; };
-		4109988729BA963000954329 /* LabeledCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledCheckBox.swift; sourceTree = "<group>"; };
-		4109988929BAA2C800954329 /* BlanRoundedTextField+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BlanRoundedTextField+Constants.swift"; sourceTree = "<group>"; };
-		4109988B29BAA45C00954329 /* LabeledCheckBoxState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledCheckBoxState.swift; sourceTree = "<group>"; };
+		4109988729BA963000954329 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		4109988929BAA2C800954329 /* TitledTextField+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TitledTextField+Constants.swift"; sourceTree = "<group>"; };
+		4109988B29BAA45C00954329 /* CheckBoxState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxState.swift; sourceTree = "<group>"; };
 		4109988E29BAB13200954329 /* UnderlinedDashButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedDashButton.swift; sourceTree = "<group>"; };
 		4109989029BB599B00954329 /* UnderlinedDashButtonState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedDashButtonState.swift; sourceTree = "<group>"; };
 		4109989229BB5CBC00954329 /* CommonButtonState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButtonState.swift; sourceTree = "<group>"; };
-		4146422229B6003E00E4F0BF /* BlanRoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlanRoundedTextField.swift; sourceTree = "<group>"; };
+		4146422229B6003E00E4F0BF /* TitledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitledTextField.swift; sourceTree = "<group>"; };
 		4146422429B6118800E4F0BF /* EdgeInsetsTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeInsetsTextField.swift; sourceTree = "<group>"; };
 		4146422729B6127C00E4F0BF /* UIView+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CornerRadius.swift"; sourceTree = "<group>"; };
 		4146422A29B652F400E4F0BF /* BlanRoundedTextFieldState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlanRoundedTextFieldState.swift; sourceTree = "<group>"; };
@@ -251,8 +251,8 @@
 		4109988629BA961400954329 /* LabeledCheckBox */ = {
 			isa = PBXGroup;
 			children = (
-				4109988729BA963000954329 /* LabeledCheckBox.swift */,
-				4109988B29BAA45C00954329 /* LabeledCheckBoxState.swift */,
+				4109988729BA963000954329 /* CheckBox.swift */,
+				4109988B29BAA45C00954329 /* CheckBoxState.swift */,
 			);
 			path = LabeledCheckBox;
 			sourceTree = "<group>";
@@ -273,7 +273,7 @@
 				4109988629BA961400954329 /* LabeledCheckBox */,
 				4109988229BA919A00954329 /* CommonLabel */,
 				4109987F29BA79E300954329 /* CommonButton */,
-				4146422929B652DF00E4F0BF /* BlanRoundedTextField */,
+				4146422929B652DF00E4F0BF /* TitledTextField */,
 				4146422429B6118800E4F0BF /* EdgeInsetsTextField.swift */,
 			);
 			path = Views;
@@ -287,14 +287,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		4146422929B652DF00E4F0BF /* BlanRoundedTextField */ = {
+		4146422929B652DF00E4F0BF /* TitledTextField */ = {
 			isa = PBXGroup;
 			children = (
-				4146422229B6003E00E4F0BF /* BlanRoundedTextField.swift */,
+				4146422229B6003E00E4F0BF /* TitledTextField.swift */,
 				4146422A29B652F400E4F0BF /* BlanRoundedTextFieldState.swift */,
-				4109988929BAA2C800954329 /* BlanRoundedTextField+Constants.swift */,
+				4109988929BAA2C800954329 /* TitledTextField+Constants.swift */,
 			);
-			path = BlanRoundedTextField;
+			path = TitledTextField;
 			sourceTree = "<group>";
 		};
 		41AE26A729B8838D0072575B /* Loading */ = {
@@ -859,12 +859,12 @@
 				C6FF393D29AF992C003610F5 /* Configurable.swift in Sources */,
 				C6303E0829B502E7002F96E4 /* LoginAPIClient.swift in Sources */,
 				C6303E1029B76681002F96E4 /* AppCoordinator.swift in Sources */,
-				4146422329B6003E00E4F0BF /* BlanRoundedTextField.swift in Sources */,
+				4146422329B6003E00E4F0BF /* TitledTextField.swift in Sources */,
 				C6FF394429AFB09C003610F5 /* NetworkError.swift in Sources */,
 				4109988429BA91A700954329 /* CommonLabel.swift in Sources */,
 				C6303E1829BA2FF7002F96E4 /* StorageManager.swift in Sources */,
 				4109988F29BAB13200954329 /* UnderlinedDashButton.swift in Sources */,
-				4109988C29BAA45C00954329 /* LabeledCheckBoxState.swift in Sources */,
+				4109988C29BAA45C00954329 /* CheckBoxState.swift in Sources */,
 				C6303E2229BA4315002F96E4 /* OptionalDecodable.swift in Sources */,
 				C66DC04429BA728A00EFB207 /* JWTToken.swift in Sources */,
 				C6FF394E29B1F54B003610F5 /* APIClient.swift in Sources */,
@@ -887,10 +887,10 @@
 				41AE26AA29B887890072575B /* LoadingViewController.swift in Sources */,
 				4146422529B6118800E4F0BF /* EdgeInsetsTextField.swift in Sources */,
 				41CAA4F629B4FD3A00492DEB /* LoginViewModelState.swift in Sources */,
-				4109988A29BAA2C800954329 /* BlanRoundedTextField+Constants.swift in Sources */,
+				4109988A29BAA2C800954329 /* TitledTextField+Constants.swift in Sources */,
 				41CAA4E929B4F86C00492DEB /* LoginViewController.swift in Sources */,
 				C66DC04629BA760200EFB207 /* Date+Extension.swift in Sources */,
-				4109988829BA963000954329 /* LabeledCheckBox.swift in Sources */,
+				4109988829BA963000954329 /* CheckBox.swift in Sources */,
 				C6303E1329B9F0BF002F96E4 /* LoginCoordinator.swift in Sources */,
 				41AE26A629B67B9D0072575B /* AppConstants+Regex.swift in Sources */,
 				C6303E0D29B50519002F96E4 /* Encodable+Extension.swift in Sources */,

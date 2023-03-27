@@ -69,13 +69,11 @@ class UnderlinedDashButton: UIView {
         ])
     }
     
-    // TODO: Clean up
-    
     private func configureUI() {
         setupConstraints()
         let caShapeLayer = CAShapeLayer()
         caShapeLayer.strokeColor = Assets.Colors.Border.Placeholder.default.color.cgColor
-        caShapeLayer.lineWidth = 1
+        caShapeLayer.lineWidth = 2
         caShapeLayer.lineDashPattern = [2,3]
         let cgPath = CGMutablePath()
         let cgPoint = [CGPoint(x: 0, y: frame.maxY), CGPoint(x: frame.maxX, y: frame.maxY)]

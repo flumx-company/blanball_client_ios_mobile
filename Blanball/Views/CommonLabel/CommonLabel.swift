@@ -1,5 +1,5 @@
 //
-//  CommonLabel.swift
+//  UILabel+Configure.swift
 //  Blanball
 //
 //  Created by Nik Dub on 10.03.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CommonLabel: UILabel {
+extension UILabel {
     func configure(
         text: String? = nil,
         tintColor: UIColor? = nil,

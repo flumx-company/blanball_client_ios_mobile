@@ -7,6 +7,4 @@
 
 import Foundation
 
-final class ResetPasswordViewModel: BaseViewModel<ResetPasswordViewModelState> {
-    
-}
+final class ResetPasswordViewModel: BaseViewModel<ResetPasswordViewModelState> {}

@@ -13,16 +13,18 @@ class LoginViewController: BaseViewController<LoginViewModel> {
     // MARK: - Outlets -
     
     @IBOutlet private weak var logoImageView: UIImageView!
-    @IBOutlet private weak var subtitleLabel: CommonLabel!
-    @IBOutlet private weak var titleLabel: CommonLabel!
-    @IBOutlet private weak var loginTextField: BlanRoundedTextField!
-    @IBOutlet private weak var passwordTextField: BlanRoundedTextField!
-    @IBOutlet private weak var checkBoxButton: LabeledCheckBox!
+    @IBOutlet private weak var subtitleLabel: UILabel!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var loginTextField: TitledTextField!
+    @IBOutlet private weak var passwordTextField: TitledTextField!
+    @IBOutlet private weak var checkBoxButton: CheckBox!
+    @IBOutlet private weak var saveUserContainerView: UIView!
+    @IBOutlet private weak var saveUserLabel: UILabel!
     @IBOutlet private weak var loginButton: CommonButton!
     @IBOutlet private weak var forgotPasswordButton: UnderlinedDashButton!
     @IBOutlet private weak var signUpButton: UnderlinedDashButton!
-    @IBOutlet private weak var signUpLabel: CommonLabel!
-    @IBOutlet private weak var alternativeLabel: CommonLabel!
+    @IBOutlet private weak var signUpLabel: UILabel!
+    @IBOutlet private weak var alternativeLabel: UILabel!
     @IBOutlet private weak var appleSignInButton: CommonButton!
     
     // MARK: - Lifecycle -
@@ -37,11 +39,6 @@ class LoginViewController: BaseViewController<LoginViewModel> {
 
     override func setupView() {
         logoImageView.image = Assets.Images.blanballLogo.image
-        checkBoxButton.configure(
-            title: "Запам'ятати мене",
-            with: Assets.Colors.Bg.Btn.selected.color,
-            font: FontFamily.Inter.regular.font(size: 12)
-        )
         titleLabel.configure(
             text: "Blanball",
             tintColor: Assets.Colors.Bg.dark.color,
@@ -103,6 +100,17 @@ class LoginViewController: BaseViewController<LoginViewModel> {
             backgroundEnabled: Assets.Colors.Bg.accent.color,
             backgroundDisabled: Assets.Colors.Bg.accent.color.withAlphaComponent(0.7)
         )
+        saveUserLabel.configure(
+            text: "Запам'ятати мене",
+            tintColor: Assets.Colors.Bg.Btn.selected.color,
+            font: FontFamily.Inter.regular.font(size: 12)
+        )
+        saveUserContainerView.addGestureRecognizer(
+            UITapGestureRecognizer(
+                target: self,
+                action: #selector(saveUserViewTapped)
+            )
+        )
         loginButton.addTarget(
             self,
             action: #selector(loginButtonTapped),
@@ -145,13 +153,13 @@ class LoginViewController: BaseViewController<LoginViewModel> {
         )
     }
     
+    // MARK: - Actions -
+    
     @objc private func loginButtonTapped() {
-        let spinnerController = LoadingViewController(
-            nibName: "LoadingViewController",
-            bundle: nil
-        )
-        spinnerController.modalPresentationStyle = .overFullScreen
-        spinnerController.modalTransitionStyle = .crossDissolve
-        self.present(spinnerController, animated: false)
+        showLoadingSpinner()
+    }
+    
+    @objc private func saveUserViewTapped() {
+        checkBoxButton.toggleState()
     }
 }

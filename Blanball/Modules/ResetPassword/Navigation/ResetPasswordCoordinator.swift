@@ -28,14 +28,14 @@ final class ResetPasswordCoordinator: NavigationCoordinator<LoginRoute> {
         switch route {
         case .login:
             let viewModel = LoginViewModel(
-                router: self.unownedRouter,
+                router: self.strongRouter,
                 apiClient: LoginAPIClientImpl()
             )
             let viewController = LoginViewController(viewModel: viewModel)
             return .set([viewController])
         case .signUp:
             let viewModel = LoginViewModel(
-                router: self.unownedRouter,
+                router: self.strongRouter,
                 apiClient: LoginAPIClientImpl()
             )
             let viewController = LoginViewController(viewModel: viewModel)

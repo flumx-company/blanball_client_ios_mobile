@@ -9,13 +9,9 @@ import UIKit
 
 class CommonButton: UIButton {
     
-    // TODO: Implement another solution or enhance current
-    
     // MARK: - Internal properties -
     
     @Published private(set) var condition: CommonButtonState
-    
-    // MARK: - Private properties -
     
     override var isEnabled: Bool {
         didSet {
@@ -24,6 +20,8 @@ class CommonButton: UIButton {
             : backgroundColors.offColor
         }
     }
+    
+    // MARK: - Private properties -
     
     private var backgroundColors: (onColor: UIColor?, offColor: UIColor?) = (nil, nil)
     private var borderColors: (onColor: UIColor?, offColor: UIColor?) = (nil, nil) {
@@ -56,8 +54,6 @@ class CommonButton: UIButton {
     
     // MARK: - Internal properties -
     
-    // TODO: MAKE INSETS
-    
     func apply(state: CommonButtonState) {
         switch state {
         case .ready:
@@ -89,18 +85,24 @@ class CommonButton: UIButton {
         backgroundColors = (backgroundEnabled, backgroundDisabled)
         borderColors = (borderEnabled, borderDisabled)
         setImage(imageEnabled, for: .normal)
-        imageEdgeInsets = UIEdgeInsets(
-            top: 1,
-            left: 1,
-            bottom: 1,
-            right: 17
-        )
         tintColor = tintEnabled
         apply(state: .ready)
     }
     
     private func configureUI() {
+        imageEdgeInsets = Constants.imageInsets
         layer.cornerRadius = 6
         clipsToBounds = true
+    }
+}
+
+extension CommonButton {
+    enum Constants {
+        static let imageInsets = UIEdgeInsets(
+            top: 1,
+            left: 1,
+            bottom: 1,
+            right: 17
+        )
     }
 }

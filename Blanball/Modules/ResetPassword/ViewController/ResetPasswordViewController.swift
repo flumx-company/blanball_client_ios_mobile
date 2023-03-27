@@ -13,7 +13,7 @@ class ResetPasswordViewController: BaseViewController<ResetPasswordViewModel> {
     
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var canvasView: UIView!
-    @IBOutlet private weak var emailTextField: BlanRoundedTextField!
+    @IBOutlet private weak var emailTextField: TitledTextField!
     @IBOutlet private weak var sendCodeButton: CommonButton!
     
     // MARK: - Lifecycle -
@@ -41,7 +41,6 @@ class ResetPasswordViewController: BaseViewController<ResetPasswordViewModel> {
             backgroundDisabled: Assets.Colors.Bg.accent.color.withAlphaComponent(0.7)
         )
         imageView.image = Assets.Images.ukraine.image
-//        imageView.backgroundColor =
         canvasView.layer.cornerRadius = 28
         canvasView.clipsToBounds = true
     }
