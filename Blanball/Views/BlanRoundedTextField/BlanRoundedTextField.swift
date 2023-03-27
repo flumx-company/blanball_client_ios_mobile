@@ -268,7 +268,11 @@ class BlanRoundedTextField: UIView {
 
 extension BlanRoundedTextField: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
-        setupViewState(isValid: textField.text?.isEmpty ?? false)
+        if isValid(string: textField.text ?? "", literalRegex: pattern ?? "") {
+            setupViewState(isValid: true)
+        } else {
+            setupViewState(isValid: false)
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

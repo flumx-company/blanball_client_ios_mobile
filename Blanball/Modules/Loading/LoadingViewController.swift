@@ -11,13 +11,14 @@ class LoadingViewController: UIViewController {
     
     // MARK: - Outlets -
     
-    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var titleLabel: CommonLabel!
     @IBOutlet private weak var spinnerImageView: UIImageView!
     
     // MARK: - Lifecycle -
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViews()
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(applicationDidBecomeActive),
@@ -29,7 +30,6 @@ class LoadingViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         startSpinning()
-        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -48,6 +48,14 @@ class LoadingViewController: UIViewController {
     }
     
     // MARK: - Private methods -
+    
+    private func setupViews() {
+        titleLabel.configure(
+            text: "Завантаження",
+            tintColor: Assets.Colors.Text.inverse.color,
+            font: FontFamily.Inter.regular.font(size: 14)
+        )
+    }
     
     private func rotate() {
         let rotation: CABasicAnimation = CABasicAnimation(keyPath: Constants.transformRotationZKey)

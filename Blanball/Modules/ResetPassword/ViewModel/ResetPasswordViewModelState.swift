@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+enum ResetPasswordViewModelState: ViewModelState {
+    case started
+    case failure(error: Error)
+    case loading
+    case updated
+}

@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+enum CommonButtonState {
+    case ready
+    case loading
+    case disabled
+}

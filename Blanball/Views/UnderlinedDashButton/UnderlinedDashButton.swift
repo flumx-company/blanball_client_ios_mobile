@@ -9,6 +9,10 @@ import UIKit
 
 class UnderlinedDashButton: UIView {
     
+    // MARK: - Internal properties -
+    
+    @Published private(set) var state: UnderlinedDashButtonState
+    
     // MARK: - Private properties -
     
     private lazy var mainButton: UIButton = {
@@ -16,7 +20,7 @@ class UnderlinedDashButton: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(
             self,
-            action: #selector(checkBoxTapped),
+            action: #selector(buttonTapped),
             for: .touchUpInside
         )
         button.isEnabled = true
@@ -26,13 +30,13 @@ class UnderlinedDashButton: UIView {
     // MARK: - Internal methods -
     
     override init(frame: CGRect) {
-//        state = .deselected
+        state = .ready
         super.init(frame: frame)
         configureUI()
     }
     
     required init?(coder: NSCoder) {
-//        state = .deselected
+        state = .ready
         super.init(coder: coder)
         configureUI()
     }
@@ -83,7 +87,7 @@ class UnderlinedDashButton: UIView {
     
     // MARK: - Actions -
     
-    @objc private func checkBoxTapped() {
-        
+    @objc private func buttonTapped() {
+        state = .tapped
     }
 }

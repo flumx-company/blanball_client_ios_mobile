@@ -30,15 +30,15 @@ class LoginViewController: BaseViewController<LoginViewModel> {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.start()
-        configureUI()
+        bindLoginTextField()
+        bindPasswordTextField()
+        bindForgotPasswordButton()
     }
 
-    override func setupView() {}
-    
-    private func configureUI() {
+    override func setupView() {
         logoImageView.image = Assets.Images.blanballLogo.image
         checkBoxButton.configure(
-            title: "Запамятати мене",
+            title: "Запам'ятати мене",
             with: Assets.Colors.Bg.Btn.selected.color,
             font: FontFamily.Inter.regular.font(size: 12)
         )
@@ -93,7 +93,7 @@ class LoginViewController: BaseViewController<LoginViewModel> {
             title: "Продовжити з Apple",
             titleFont: FontFamily.Inter.bold.font(size: 14),
             tintEnabled: .white,
-            imageEnabled: UIImage(systemName: "apple.logo"),
+            imageEnabled: Assets.Images.appleLogo.image,
             backgroundEnabled: .black
         )
         loginButton.configure(
@@ -102,6 +102,11 @@ class LoginViewController: BaseViewController<LoginViewModel> {
             tintEnabled: Assets.Colors.Text.inverse.color,
             backgroundEnabled: Assets.Colors.Bg.accent.color,
             backgroundDisabled: Assets.Colors.Bg.accent.color.withAlphaComponent(0.7)
+        )
+        loginButton.addTarget(
+            self,
+            action: #selector(loginButtonTapped),
+            for: .touchUpInside
         )
     }
     
@@ -120,5 +125,33 @@ class LoginViewController: BaseViewController<LoginViewModel> {
                     break
                 }
             }.store(in: &viewModel.cancellables)
+    }
+    
+    private func bindLoginTextField() {
+        viewModel.subscribeToLoginTextFieldPublisher(
+            loginTextField.$state.eraseToAnyPublisher()
+        )
+    }
+    
+    private func bindPasswordTextField() {
+        viewModel.subscribeToLoginTextFieldPublisher(
+            passwordTextField.$state.eraseToAnyPublisher()
+        )
+    }
+    
+    private func bindForgotPasswordButton() {
+        viewModel.subscribeToForgotPasswordButtonPublisher(
+            forgotPasswordButton.$state.eraseToAnyPublisher()
+        )
+    }
+    
+    @objc private func loginButtonTapped() {
+        let spinnerController = LoadingViewController(
+            nibName: "LoadingViewController",
+            bundle: nil
+        )
+        spinnerController.modalPresentationStyle = .overFullScreen
+        spinnerController.modalTransitionStyle = .crossDissolve
+        self.present(spinnerController, animated: false)
     }
 }

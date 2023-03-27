@@ -9,47 +9,47 @@ import UIKit
 
 class CommonButton: UIButton {
     
-    //TODO: Implement another solution or enhance current
+    // TODO: Implement another solution or enhance current
+    
+    // MARK: - Internal properties -
+    
+    @Published private(set) var condition: CommonButtonState
     
     // MARK: - Private properties -
     
     override var isEnabled: Bool {
         didSet {
             backgroundColor = isEnabled
-            ? switchedBackgroundColor.0
-            : switchedBackgroundColor.1
+            ? backgroundColors.onColor
+            : backgroundColors.offColor
         }
     }
     
-    private var switchedBackgroundColor: (UIColor?, UIColor?) = (nil, nil) {
-        didSet {
-            backgroundColor = isEnabled
-            ? switchedBackgroundColor.0
-            : switchedBackgroundColor.1
-        }
-    }
-    private var disabledBorderColor: UIColor? {
+    private var backgroundColors: (onColor: UIColor?, offColor: UIColor?) = (nil, nil)
+    private var borderColors: (onColor: UIColor?, offColor: UIColor?) = (nil, nil) {
         didSet {
             layer.borderColor = isEnabled
-            ? nil
-            : disabledBorderColor?.cgColor
+            ? borderColors.onColor?.cgColor
+            : borderColors.offColor?.cgColor
         }
     }
-    private var switchedTintColor: (UIColor?, UIColor?) = (nil, nil) {
+    private var tintColors: (onColor: UIColor?, offColor: UIColor?) = (nil, nil) {
         didSet {
-            setTitleColor(switchedTintColor.0, for: .normal)
-            setTitleColor(switchedTintColor.1 ?? switchedTintColor.0, for: .disabled)
+            setTitleColor(tintColors.onColor, for: .normal)
+            setTitleColor(tintColors.offColor, for: .disabled)
         }
     }
     
     // MARK: - Internal methods -
     
     override init(frame: CGRect) {
+        self.condition = .ready
         super.init(frame: frame)
         configureUI()
     }
     
     required init?(coder: NSCoder) {
+        self.condition = .ready
         super.init(coder: coder)
         configureUI()
     }
@@ -57,6 +57,20 @@ class CommonButton: UIButton {
     // MARK: - Internal properties -
     
     // TODO: MAKE INSETS
+    
+    func apply(state: CommonButtonState) {
+        switch state {
+        case .ready:
+            isEnabled = true
+            backgroundColor = backgroundColors.onColor
+        case .loading:
+            isEnabled = false
+            backgroundColor = backgroundColors.offColor
+        case .disabled:
+            isEnabled = false
+            backgroundColor = backgroundColors.offColor
+        }
+    }
     
     func configure(
         title: String? = nil,
@@ -67,26 +81,22 @@ class CommonButton: UIButton {
         imageDisabled: UIImage? = nil,
         backgroundEnabled: UIColor? = nil,
         backgroundDisabled: UIColor? = nil,
+        borderEnabled: UIColor? = nil,
         borderDisabled: UIColor? = nil
     ) {
         setTitle(title, for: .normal)
-        switchedTintColor = (tintEnabled, tintDisabled)
-        switchedBackgroundColor = (backgroundEnabled, backgroundDisabled)
-        disabledBorderColor = borderDisabled
+        tintColors = (tintEnabled, tintDisabled)
+        backgroundColors = (backgroundEnabled, backgroundDisabled)
+        borderColors = (borderEnabled, borderDisabled)
         setImage(imageEnabled, for: .normal)
-        titleEdgeInsets = UIEdgeInsets(
-            top: 1,
-            left: -60,
-            bottom: 1,
-            right: 1
-        )
         imageEdgeInsets = UIEdgeInsets(
             top: 1,
             left: 1,
             bottom: 1,
-            right: -60
+            right: 17
         )
         tintColor = tintEnabled
+        apply(state: .ready)
     }
     
     private func configureUI() {

@@ -27,14 +27,14 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tWe-n2-coU">
                             <rect key="frame" x="131.66666666666666" y="353" width="129.99999999999997" height="146"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spinner" translatesAutoresizingMaskIntoConstraints="NO" id="Ckc-yF-BPB">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images/Spinner" translatesAutoresizingMaskIntoConstraints="NO" id="Ckc-yF-BPB">
                                     <rect key="frame" x="8" y="0.0" width="114" height="114"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="114" id="2lC-f0-t4P"/>
                                         <constraint firstAttribute="width" secondItem="Ckc-yF-BPB" secondAttribute="height" multiplier="1:1" id="xZ6-iF-vlg"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Завантаження..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4I-Ze-nO8">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Завантаження..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4I-Ze-nO8" customClass="CommonLabel" customModule="Blanball" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="126" width="130" height="20"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                     <color key="textColor" name="Colors/text/inverse"/>
@@ -69,7 +69,7 @@
         </view>
     </objects>
     <resources>
-        <image name="Spinner" width="114" height="114"/>
+        <image name="Images/Spinner" width="114" height="114"/>
         <namedColor name="Colors/text/inverse">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

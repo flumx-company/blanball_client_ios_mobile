@@ -7,23 +7,42 @@
 
 import UIKit
 
-class ResetPasswordViewController: UIViewController {
-
+class ResetPasswordViewController: BaseViewController<ResetPasswordViewModel> {
+    
+    // MARK: - Outlets -
+    
+    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var canvasView: UIView!
+    @IBOutlet private weak var emailTextField: BlanRoundedTextField!
+    @IBOutlet private weak var sendCodeButton: CommonButton!
+    
+    // MARK: - Lifecycle -
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    // MARK: - Private methods -
+    
+    override func setupView() {
+        emailTextField.configure(
+            title: "Email",
+            titleFont: FontFamily.Inter.regular.font(size: 12),
+            textFont: FontFamily.Inter.regular.font(size: 13),
+            placeholder: "Введіть email",
+            placeholderFont: FontFamily.Inter.regular.font(size: 13),
+            pattern: AppConstants.Regex.email
+        )
+        sendCodeButton.configure(
+            title: "Надіслати код",
+            titleFont: FontFamily.Inter.medium.font(size: 13),
+            tintEnabled: Assets.Colors.Text.inverse.color,
+            backgroundEnabled: Assets.Colors.Bg.accent.color,
+            backgroundDisabled: Assets.Colors.Bg.accent.color.withAlphaComponent(0.7)
+        )
+        imageView.image = Assets.Images.ukraine.image
+//        imageView.backgroundColor =
+        canvasView.layer.cornerRadius = 28
+        canvasView.clipsToBounds = true
     }
-    */
-
 }

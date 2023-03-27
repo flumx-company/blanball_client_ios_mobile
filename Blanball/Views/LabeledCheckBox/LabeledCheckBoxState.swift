@@ -10,4 +10,5 @@ import Foundation
 enum LabeledCheckBoxState {
     case selected
     case deselected
+    case disabled
 }

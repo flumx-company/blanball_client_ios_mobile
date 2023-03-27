@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+enum UnderlinedDashButtonState {
+    case ready
+    case loading
+    case disabled
+    case tapped
+}

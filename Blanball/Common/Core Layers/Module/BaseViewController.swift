@@ -12,7 +12,6 @@ class BaseViewController<ViewModel: AnyObject>: UIViewController {
     // MARK: - Public properties
     
     var viewModel: ViewModel!
-
     
     // MARK: - Init
 
