@@ -36,12 +36,7 @@ final class LoginCoordinator: NavigationCoordinator<LoginRoute> {
         case .signUp:
             return .none()
         case .resetPassword:
-            let viewModel = ResetPasswordViewModel(
-//                router: self.unownedRouter,
-//                apiClient: LoginAPIClientImpl()
-                state: .started)
-            let viewController = ResetPasswordViewController(viewModel: viewModel)
-            return .set([viewController])
+            return .none()
         }
     }
 }

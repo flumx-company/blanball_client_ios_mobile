@@ -22,13 +22,7 @@
 		4146422829B6127C00E4F0BF /* UIView+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4146422729B6127C00E4F0BF /* UIView+CornerRadius.swift */; };
 		4146422B29B652F400E4F0BF /* BlanRoundedTextFieldState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4146422A29B652F400E4F0BF /* BlanRoundedTextFieldState.swift */; };
 		41AE26A629B67B9D0072575B /* AppConstants+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AE26A529B67B9D0072575B /* AppConstants+Regex.swift */; };
-		41AE26AA29B887890072575B /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AE26A829B887880072575B /* LoadingViewController.swift */; };
-		41AE26AB29B887890072575B /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41AE26A929B887890072575B /* LoadingViewController.xib */; };
-		41B406AE29CDED6F0016B326 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B406AC29CDED6F0016B326 /* ResetPasswordViewController.swift */; };
-		41B406AF29CDED6F0016B326 /* ResetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41B406AD29CDED6F0016B326 /* ResetPasswordViewController.xib */; };
-		41B406B129CDED8B0016B326 /* ResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B406B029CDED8B0016B326 /* ResetPasswordViewModel.swift */; };
-		41B406B329CDEDAA0016B326 /* ResetPasswordViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B406B229CDEDAA0016B326 /* ResetPasswordViewModelState.swift */; };
-		41B406B529CDEE350016B326 /* ResetPasswordCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B406B429CDEE350016B326 /* ResetPasswordCoordinator.swift */; };
+		41AE26AA29B887890072575B /* LoadingSpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AE26A829B887880072575B /* LoadingSpinnerView.swift */; };
 		41CAA4E829B4F86C00492DEB /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41CAA4E629B4F86C00492DEB /* LoginViewController.xib */; };
 		41CAA4E929B4F86C00492DEB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CAA4E729B4F86C00492DEB /* LoginViewController.swift */; };
 		41CAA4F629B4FD3A00492DEB /* LoginViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CAA4F529B4FD3A00492DEB /* LoginViewModelState.swift */; };
@@ -123,13 +117,7 @@
 		4146422729B6127C00E4F0BF /* UIView+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CornerRadius.swift"; sourceTree = "<group>"; };
 		4146422A29B652F400E4F0BF /* BlanRoundedTextFieldState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlanRoundedTextFieldState.swift; sourceTree = "<group>"; };
 		41AE26A529B67B9D0072575B /* AppConstants+Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppConstants+Regex.swift"; sourceTree = "<group>"; };
-		41AE26A829B887880072575B /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
-		41AE26A929B887890072575B /* LoadingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingViewController.xib; sourceTree = "<group>"; };
-		41B406AC29CDED6F0016B326 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
-		41B406AD29CDED6F0016B326 /* ResetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResetPasswordViewController.xib; sourceTree = "<group>"; };
-		41B406B029CDED8B0016B326 /* ResetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewModel.swift; sourceTree = "<group>"; };
-		41B406B229CDEDAA0016B326 /* ResetPasswordViewModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewModelState.swift; sourceTree = "<group>"; };
-		41B406B429CDEE350016B326 /* ResetPasswordCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordCoordinator.swift; sourceTree = "<group>"; };
+		41AE26A829B887880072575B /* LoadingSpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingSpinnerView.swift; sourceTree = "<group>"; };
 		41CAA4E629B4F86C00492DEB /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		41CAA4E729B4F86C00492DEB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		41CAA4EB29B4FC0400492DEB /* Assets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Assets+Generated.swift"; sourceTree = "<group>"; };
@@ -269,6 +257,7 @@
 		4146422129B6000300E4F0BF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				41AE26A729B8838D0072575B /* LoadingSpinnerView */,
 				4109988D29BAB11700954329 /* UnderlinedDashButton */,
 				4109988629BA961400954329 /* LabeledCheckBox */,
 				4109988229BA919A00954329 /* CommonLabel */,
@@ -297,72 +286,17 @@
 			path = TitledTextField;
 			sourceTree = "<group>";
 		};
-		41AE26A729B8838D0072575B /* Loading */ = {
+		41AE26A729B8838D0072575B /* LoadingSpinnerView */ = {
 			isa = PBXGroup;
 			children = (
-				41AE26A829B887880072575B /* LoadingViewController.swift */,
-				41AE26A929B887890072575B /* LoadingViewController.xib */,
+				41AE26A829B887880072575B /* LoadingSpinnerView.swift */,
 			);
-			path = Loading;
-			sourceTree = "<group>";
-		};
-		41B406A629CDECFB0016B326 /* ResetPassword */ = {
-			isa = PBXGroup;
-			children = (
-				41B406AB29CDED2F0016B326 /* Navigation */,
-				41B406AA29CDED280016B326 /* API */,
-				41B406A929CDED220016B326 /* Models */,
-				41B406A829CDED180016B326 /* ViewModel */,
-				41B406A729CDED0B0016B326 /* ViewController */,
-			);
-			path = ResetPassword;
-			sourceTree = "<group>";
-		};
-		41B406A729CDED0B0016B326 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				41B406AC29CDED6F0016B326 /* ResetPasswordViewController.swift */,
-				41B406AD29CDED6F0016B326 /* ResetPasswordViewController.xib */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		41B406A829CDED180016B326 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				41B406B029CDED8B0016B326 /* ResetPasswordViewModel.swift */,
-				41B406B229CDEDAA0016B326 /* ResetPasswordViewModelState.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		41B406A929CDED220016B326 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		41B406AA29CDED280016B326 /* API */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
-		41B406AB29CDED2F0016B326 /* Navigation */ = {
-			isa = PBXGroup;
-			children = (
-				41B406B429CDEE350016B326 /* ResetPasswordCoordinator.swift */,
-			);
-			path = Navigation;
+			path = LoadingSpinnerView;
 			sourceTree = "<group>";
 		};
 		41CAA4E429B4F86C00492DEB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				41B406A629CDECFB0016B326 /* ResetPassword */,
-				41AE26A729B8838D0072575B /* Loading */,
 				41CAA4E529B4F86C00492DEB /* Login */,
 			);
 			path = Modules;
@@ -819,9 +753,7 @@
 				C6303EC729BA60CF002F96E4 /* Exo2-Medium.ttf in Resources */,
 				C6303EC229BA60CF002F96E4 /* Exo2-BlackItalic.ttf in Resources */,
 				C6254A1329B376E000558130 /* swiftgen.yml in Resources */,
-				41AE26AB29B887890072575B /* LoadingViewController.xib in Resources */,
 				C6303EBA29BA60CF002F96E4 /* Exo2-Italic.ttf in Resources */,
-				41B406AF29CDED6F0016B326 /* ResetPasswordViewController.xib in Resources */,
 				C6303E9429BA60B6002F96E4 /* Inter-Thin.otf in Resources */,
 				C6303E9329BA60B6002F96E4 /* Inter-Medium.otf in Resources */,
 				C6303E9C29BA60B6002F96E4 /* Inter-SemiBoldItalic.otf in Resources */,
@@ -872,7 +804,6 @@
 				41CAA4F829B4FDBB00492DEB /* ViewModelState.swift in Sources */,
 				4109987D29BA70DE00954329 /* Assets+Generated.swift in Sources */,
 				C6FF395629B201B2003610F5 /* AppConstansts .swift in Sources */,
-				41B406AE29CDED6F0016B326 /* ResetPasswordViewController.swift in Sources */,
 				4109989329BB5CBC00954329 /* CommonButtonState.swift in Sources */,
 				C6FF394229AF9C86003610F5 /* HTTPMethod.swift in Sources */,
 				4109989129BB599B00954329 /* UnderlinedDashButtonState.swift in Sources */,
@@ -884,7 +815,7 @@
 				C6FF393229AF85A7003610F5 /* BaseViewModel.swift in Sources */,
 				C6C7119429ACDCBB00D58FE8 /* AppDelegate.swift in Sources */,
 				C6FF395329B2009D003610F5 /* CommonService+Default.swift in Sources */,
-				41AE26AA29B887890072575B /* LoadingViewController.swift in Sources */,
+				41AE26AA29B887890072575B /* LoadingSpinnerView.swift in Sources */,
 				4146422529B6118800E4F0BF /* EdgeInsetsTextField.swift in Sources */,
 				41CAA4F629B4FD3A00492DEB /* LoginViewModelState.swift in Sources */,
 				4109988A29BAA2C800954329 /* TitledTextField+Constants.swift in Sources */,
@@ -894,12 +825,9 @@
 				C6303E1329B9F0BF002F96E4 /* LoginCoordinator.swift in Sources */,
 				41AE26A629B67B9D0072575B /* AppConstants+Regex.swift in Sources */,
 				C6303E0D29B50519002F96E4 /* Encodable+Extension.swift in Sources */,
-				41B406B329CDEDAA0016B326 /* ResetPasswordViewModelState.swift in Sources */,
 				4109988129BA79F700954329 /* CommonButton.swift in Sources */,
 				C6303E0629B502CA002F96E4 /* LoginAPI.swift in Sources */,
-				41B406B529CDEE350016B326 /* ResetPasswordCoordinator.swift in Sources */,
 				C6FF393B29AF8C55003610F5 /* CommonService.swift in Sources */,
-				41B406B129CDED8B0016B326 /* ResetPasswordViewModel.swift in Sources */,
 				C6303E0B29B5042F002F96E4 /* LoginRequestModel.swift in Sources */,
 				C6FF396D29B2377D003610F5 /* String+Extension.swift in Sources */,
 				C6303E2529BA43CE002F96E4 /* StorageContainer.swift in Sources */,

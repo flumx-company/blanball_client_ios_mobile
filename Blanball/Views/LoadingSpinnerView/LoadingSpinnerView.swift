@@ -1,5 +1,5 @@
 //
-//  LoadingViewController.swift
+//  LoadingSpinnerView.swift
 //  Blanball
 //
 //  Created by Nik Dub on 08.03.2023.

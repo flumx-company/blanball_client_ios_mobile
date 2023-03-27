@@ -85,7 +85,9 @@ final class LoginViewModel: BaseViewModel<LoginViewModelState> {
     ) async {
         Task { 
             do {
-                _ = try await self.apiClient.login(reqModel: .init(email: login, password: password))
+                _ = try await self.apiClient.login(
+                    reqModel: LoginRequestModel(email: login, password: password)
+                )
                 self.updateState(newValue: .updated)
             } catch {
                 self.updateState(newValue: .failure(error: error))
