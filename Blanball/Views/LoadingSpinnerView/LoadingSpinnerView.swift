@@ -56,13 +56,6 @@ class LoadingSpinnerView: UIView {
         setupViews()
     }
     
-//    override func () {
-//        super.viewDidLoad()
-//        initialSetup()
-//        setupViews()
-//    }
-//
-    
     override func layoutSubviews() {
         super.layoutSubviews()
         startSpinning()
@@ -103,7 +96,7 @@ class LoadingSpinnerView: UIView {
     
     private func setupViews() {
         titleLabel.configure(
-            text: "Завантаження",
+            text: "Завантаження...",
             tintColor: Assets.Colors.Text.inverse.color,
             font: FontFamily.Inter.regular.font(size: 14)
         )

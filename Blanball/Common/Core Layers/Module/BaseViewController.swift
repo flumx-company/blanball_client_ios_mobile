@@ -13,11 +13,12 @@ class BaseViewController<ViewModel: AnyObject>: UIViewController {
     
     var viewModel: ViewModel!
     
-    
     // MARK: - Private properties -
     
     private lazy var loadingSpinner: LoadingSpinnerView = {
-        return LoadingSpinnerView(frame: view.frame)
+        let spinner = LoadingSpinnerView(frame: view.frame)
+        view.addSubview(spinner)
+        return spinner
     }()
     
     // MARK: - Init
