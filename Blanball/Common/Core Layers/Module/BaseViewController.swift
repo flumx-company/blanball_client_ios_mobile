@@ -12,7 +12,14 @@ class BaseViewController<ViewModel: AnyObject>: UIViewController {
     // MARK: - Public properties
     
     var viewModel: ViewModel!
-
+    
+    // MARK: - Private properties -
+    
+    private lazy var loadingSpinner: LoadingSpinnerView = {
+        let spinner = LoadingSpinnerView(frame: view.frame)
+        view.addSubview(spinner)
+        return spinner
+    }()
     
     // MARK: - Init
 
@@ -39,5 +46,13 @@ class BaseViewController<ViewModel: AnyObject>: UIViewController {
 
     func bindViewModel() {
         // Override in subclass to bind viewModel properties to view
+    }
+    
+    func showLoadingSpinner() {
+        loadingSpinner.startSpinning()
+    }
+    
+    func stopLoadingSpinner() {
+        loadingSpinner.stopSpinning()
     }
 }

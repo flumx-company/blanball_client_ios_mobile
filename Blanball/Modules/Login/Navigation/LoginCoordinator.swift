@@ -28,7 +28,7 @@ final class LoginCoordinator: NavigationCoordinator<LoginRoute> {
         switch route {
         case .login:
             let viewModel = LoginViewModel(
-                router: self.unownedRouter,
+                router: self.strongRouter,
                 apiClient: LoginAPIClientImpl()
             )
             let viewController = LoginViewController(viewModel: viewModel)
